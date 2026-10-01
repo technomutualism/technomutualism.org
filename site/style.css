@@ -1,0 +1,427 @@
+/* Technomutualism — a two-ink risograph print on sage paper.
+   Ink: forest green. Second ink: coral. Paper: sage, with grain. */
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("fonts/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/atkinson-hyperlegible-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/atkinson-hyperlegible-latin-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("fonts/atkinson-hyperlegible-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --paper: #d4ddc6;
+  --paper-deep: #c3cfb2;
+  --paper-light: #e2e8d7;
+  --ink: #14372a;
+  --ink-soft: #2f5444;
+  --coral: #c8402a;      /* coral as text: large type only (3.5:1 on paper) */
+  --coral-fill: #ff7a5c; /* coral as a fill, with ink on it (5.1:1) */
+  --display: "Bricolage Grotesque", "Arial Black", "Helvetica Neue", sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", Roboto, Arial, sans-serif;
+  --measure: 40rem;
+  --gutter: 1rem;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+/* Paper grain: a fixed noise layer over everything, too faint to hurt reading. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  opacity: 0.22;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.08 0 0 0 0 0.2 0 0 0 0 0.15 0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+img, svg { max-width: 100%; height: auto; }
+
+a {
+  color: var(--ink);
+  text-decoration-color: var(--coral);
+  text-decoration-thickness: 0.14em;
+  text-underline-offset: 0.18em;
+}
+a:hover { background: var(--coral-fill); text-decoration-color: var(--ink); }
+a:focus-visible, button:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0.5rem;
+  background: var(--coral-fill);
+  padding: 0.5rem 0.75rem;
+  z-index: 200;
+}
+.skip:focus { left: 0.5rem; }
+
+.wrap {
+  max-width: calc(64rem + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+/* One left edge for everything; reading text keeps a comfortable line length,
+   card grids and the contrast table use the full width. */
+.wrap :is(p, ul:not(.cards), ol, blockquote, details, .definition, .callout, h1, h2, h3) {
+  max-width: var(--measure);
+}
+.wrap .hero h1 { max-width: none; }
+.wrap .cards p, .wrap .cards h3, .wrap .contrast :is(p, ul, h3) { max-width: none; }
+.wrap-wide {
+  max-width: calc(64rem + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ---------- header ---------- */
+
+.site-head {
+  border-bottom: 3px solid var(--ink);
+  background: var(--paper);
+  position: relative;
+  z-index: 10;
+}
+.site-head .wrap-wide {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.25rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.brand {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.brand:hover { background: none; }
+.brand-mark { width: 1.9rem; height: 1.9rem; flex: none; }
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 0.9rem;
+}
+.site-nav a {
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.25rem 0.1rem;
+  display: inline-block;
+  border-bottom: 3px solid transparent;
+}
+.site-nav a:hover { background: none; border-bottom-color: var(--coral); }
+.site-nav a[aria-current="page"] { border-bottom-color: var(--ink); }
+
+/* ---------- type ---------- */
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.6em;
+}
+h1 { font-size: clamp(2.4rem, 11vw, 5.4rem); }
+h2 { font-size: clamp(1.75rem, 6.5vw, 2.6rem); margin-top: 1.4em; }
+h3 { font-size: 1.3rem; margin-top: 1.6em; letter-spacing: -0.01em; line-height: 1.15; }
+p, ul, ol { margin: 0 0 1em; }
+li { margin-bottom: 0.4em; }
+strong { font-weight: 700; }
+
+/* The misprint: a coral plate printed a little off the green one. */
+.riso {
+  color: var(--ink);
+  text-shadow: 0.05em 0.045em 0 var(--coral-fill);
+}
+.riso-coral {
+  color: var(--coral);
+  text-shadow: -0.04em -0.035em 0 rgba(20, 55, 42, 0.85);
+}
+
+.kicker {
+  font-family: var(--body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  margin: 0 0 0.75rem;
+  display: inline-block;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.2rem 0.55rem;
+}
+
+.lede {
+  font-size: clamp(1.2rem, 4.2vw, 1.45rem);
+  line-height: 1.45;
+}
+
+/* ---------- hero ---------- */
+
+.hero {
+  padding: clamp(2.5rem, 9vw, 5.5rem) 0 clamp(2rem, 7vw, 4rem);
+  position: relative;
+  overflow: hidden;
+}
+.hero h1 { margin-bottom: 0.35em; }
+.hero .lede { max-width: 38rem; }
+.hero-dots {
+  position: absolute;
+  right: -4rem;
+  top: 1.5rem;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background-image: radial-gradient(var(--coral-fill) 32%, transparent 34%);
+  background-size: 14px 14px;
+  opacity: 0.75;
+  z-index: -1;
+}
+.hero-page { padding-bottom: 1.5rem; }
+@media (max-width: 40rem) {
+  .hero-dots { width: 10rem; height: 10rem; right: -4.5rem; top: 0.25rem; opacity: 0.5; }
+}
+.hero-page h1 { font-size: clamp(2.2rem, 9vw, 4.2rem); }
+
+/* ---------- blocks ---------- */
+
+.section { padding: 1rem 0 2.5rem; }
+
+.band {
+  background: var(--ink);
+  color: var(--paper-light);
+  padding: clamp(2rem, 7vw, 3.5rem) 0;
+  margin: 2rem 0;
+}
+.band a { color: var(--paper-light); }
+.band a:hover { color: var(--ink); }
+.band h2 { margin-top: 0; color: var(--paper-light); text-shadow: 0.05em 0.045em 0 var(--coral); }
+
+.definition {
+  border: 3px solid var(--ink);
+  background: var(--paper-light);
+  padding: 1.25rem 1.25rem 0.5rem;
+  margin: 1.5rem 0 2rem;
+  box-shadow: 7px 7px 0 var(--coral-fill);
+}
+.definition dfn { font-style: normal; font-weight: 700; }
+.definition .pron { font-style: italic; color: var(--ink-soft); }
+.definition footer { font-size: 0.9rem; color: var(--ink-soft); margin: 0.75rem 0 0.75rem; }
+
+.callout {
+  background: var(--coral-fill);
+  color: var(--ink);
+  padding: 1rem 1.15rem;
+  margin: 1.5rem 0;
+  border-left: 6px solid var(--ink);
+}
+.callout p:last-child { margin-bottom: 0; }
+
+.note {
+  border-left: 4px solid var(--coral);
+  padding-left: 1rem;
+  color: var(--ink-soft);
+}
+
+/* Two-column contrast: stacks on phones. */
+.contrast {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border: 3px solid var(--ink);
+  margin: 1.5rem 0 2rem;
+}
+.contrast > div { padding: 1rem 1.15rem; }
+.contrast > div + div { border-top: 3px solid var(--ink); }
+.contrast h3 { margin-top: 0; font-size: 1.25rem; }
+.contrast ul { padding-left: 1.1rem; margin-bottom: 0.25rem; }
+.contrast .feudal { background: var(--paper-deep); }
+.contrast .mutual { background: var(--coral-fill); }
+@media (min-width: 46rem) {
+  .contrast { grid-template-columns: 1fr 1fr; }
+  .contrast > div + div { border-top: 0; border-left: 3px solid var(--ink); }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+}
+@media (min-width: 40rem) { .cards { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 62rem) { .cards.three { grid-template-columns: 1fr 1fr 1fr; } }
+.card {
+  border: 3px solid var(--ink);
+  background: var(--paper-light);
+  padding: 1rem 1.1rem 0.4rem;
+  margin: 0;
+}
+.card h3 { margin-top: 0; font-size: 1.2rem; }
+.card .num {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 2.2rem;
+  line-height: 1;
+  color: var(--coral);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* Timeline */
+.timeline { list-style: none; padding: 0; margin: 1.5rem 0; border-left: 3px solid var(--ink); }
+.timeline li { position: relative; padding: 0 0 1.1rem 1.25rem; margin: 0; }
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -0.6rem;
+  top: 0.35rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: var(--coral-fill);
+  border: 3px solid var(--ink);
+  border-radius: 50%;
+}
+.timeline .when { font-family: var(--display); font-weight: 800; display: block; font-size: 1.1rem; }
+
+/* Problem → fix list on the corruption page */
+.fixes { list-style: none; padding: 0; margin: 1.5rem 0; counter-reset: fix; }
+.fixes > li {
+  counter-increment: fix;
+  border-top: 3px solid var(--ink);
+  padding: 1rem 0 0.5rem 3.2rem;
+  position: relative;
+  margin: 0;
+}
+.fixes > li::before {
+  content: counter(fix);
+  position: absolute;
+  left: 0;
+  top: 0.9rem;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--coral);
+}
+.fixes h3 { margin-top: 0; }
+@media (max-width: 40rem) {
+  .fixes > li { padding-left: 0; }
+  .fixes > li::before { position: static; display: block; margin-bottom: 0.3rem; }
+}
+.fixes .needs { font-size: 0.95rem; background: var(--paper-light); padding: 0.6rem 0.8rem; border-left: 4px solid var(--ink); }
+.fixes .needs strong { display: block; }
+
+details {
+  border-top: 3px solid var(--ink);
+  padding: 0.75rem 0;
+}
+details:last-of-type { border-bottom: 3px solid var(--ink); }
+summary {
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  list-style-position: outside;
+  margin-left: 1.1rem;
+}
+details[open] summary { margin-bottom: 0.6rem; }
+
+.button {
+  display: inline-block;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-decoration: none;
+  background: var(--ink);
+  color: var(--paper-light);
+  padding: 0.7rem 1.1rem;
+  border: 3px solid var(--ink);
+  box-shadow: 5px 5px 0 var(--coral-fill);
+  margin: 0.25rem 0.75rem 0.75rem 0;
+}
+.button:hover { background: var(--coral-fill); color: var(--ink); }
+.button.secondary { background: transparent; color: var(--ink); }
+.button.secondary:hover { background: var(--coral-fill); }
+
+.next {
+  border-top: 3px solid var(--ink);
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+}
+.next a { font-family: var(--display); font-weight: 800; font-size: 1.35rem; }
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0 0 0 1rem;
+  border-left: 6px solid var(--coral-fill);
+  font-size: 1.15rem;
+}
+blockquote footer { font-size: 0.9rem; color: var(--ink-soft); margin-top: 0.25rem; }
+
+/* ---------- footer ---------- */
+
+.site-foot {
+  border-top: 3px solid var(--ink);
+  margin-top: 3rem;
+  padding: 1.75rem 0 2.5rem;
+  font-size: 0.95rem;
+}
+.site-foot p { margin-bottom: 0.6em; }
+.site-foot .small { font-size: 0.85rem; color: var(--ink-soft); }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+@media print {
+  body::before, .hero-dots, .site-nav, .skip { display: none; }
+  body { background: #fff; }
+}

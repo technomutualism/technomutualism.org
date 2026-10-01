@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ending corruption — Technomutualism</title>
+<meta name="description" content="Corruption needs hidden power over shared things. Signed records, open rules, shared keys and the freedom to leave take the hiding places away. What each one needs, and where blockchain fits.">
+<link rel="canonical" href="https://technomutualism.org/corruption">
+<meta property="og:title" content="Designing out corruption">
+<meta property="og:description" content="Twelve ways technology can take away corruption's hiding places, and what each one needs.">
+<meta property="og:url" content="https://technomutualism.org/corruption">
+<meta property="og:image" content="https://technomutualism.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d4ddc6">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+
+<header class="site-head">
+  <div class="wrap-wide">
+    <a class="brand" href="./" aria-label="Technomutualism, home">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="25" cy="32" r="15" fill="#ff7a5c"/><circle cx="39" cy="32" r="15" fill="none" stroke="#14372a" stroke-width="6"/></svg>
+      Technomutualism
+    </a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="./">The idea</a></li>
+        <li><a href="history">History</a></li>
+        <li><a href="corruption" aria-current="page">Ending corruption</a></li>
+        <li><a href="in-practice">In practice</a></li>
+        <li><a href="questions">Questions</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="wrap">
+
+<section class="hero hero-page">
+  <p class="kicker">Ending corruption</p>
+  <h1 class="riso">Take away the hiding places</h1>
+  <p class="lede">Corruption needs three things: power over something shared, a way to use it secretly, and nobody able to
+    stop you. Technology can't make people good. It can make secret abuse of shared things very hard to get away with.</p>
+</section>
+
+<section class="section">
+  <p>Think about how corruption actually happens. An official edits a land record. A treasurer moves money between
+    accounts. A bank creates credit for its friends. A platform quietly changes its rules to favour its own products.
+    A ballot box goes missing. Each one depends on <strong>someone controlling a record that others can't check</strong>.</p>
+  <p>Technomutualism attacks that directly. Here are twelve ways, and for each one, what it actually takes to make it work.</p>
+
+  <ol class="fixes">
+    <li>
+      <h3>Every payment signed by the payer</h3>
+      <p>Each member holds a secret key on their own phone, often backed up as a list of words. A payment only counts if it's
+        signed with that key. Not the server owner, not an administrator, not a hacker can spend your money for you.</p>
+      <p class="needs"><strong>What it needs:</strong> members who keep their own keys safe, and a simple way to recover them that doesn't hand the key to someone else.</p>
+    </li>
+    <li>
+      <h3>Money that can't be printed by insiders</h3>
+      <p>In mutual credit, money is created only when one member pays another: one balance goes up and the other goes down by
+        the same amount. All balances always add up to zero. No central bank, treasurer or "friend of the manager" can make
+        money from nothing.</p>
+      <p class="needs"><strong>What it needs:</strong> credit limits set by published rules, such as a member's trading record, not by anyone's personal approval.</p>
+    </li>
+    <li>
+      <h3>Rules as open code</h3>
+      <p>How fees, limits and votes work is written in open-source software that anyone can read. "The rules" stop being
+        whatever the person in charge says they are this week.</p>
+      <p class="needs"><strong>What it needs:</strong> the code published, every change recorded in public, and plain-language explanations so non-programmers can follow along.</p>
+    </li>
+    <li>
+      <h3>A ledger that shows tampering</h3>
+      <p>Each record can carry a fingerprint (a "hash") of the records before it, so changing an old entry breaks every
+        fingerprint after it. Independent copies held by different people show at once if one copy was altered.</p>
+      <p class="needs"><strong>What it needs:</strong> copies held by people who don't answer to each other, and someone who actually checks them.</p>
+    </li>
+    <li>
+      <h3>Decisions that carry themselves out</h3>
+      <p>When members vote to spend from a shared fund, the software makes the payment exactly as voted. Nobody gets to
+        "forget", delay, or redirect it to a cousin.</p>
+      <p class="needs"><strong>What it needs:</strong> fair voting rules (who may vote, how many must take part) agreed in advance, and protection against fake accounts.</p>
+    </li>
+    <li>
+      <h3>Shared funds in the open</h3>
+      <p>Community funds, such as a fee on each sale or the slow fade of hoarded credit, flow into a common pot whose every
+        payment members can see.</p>
+      <p class="needs"><strong>What it needs:</strong> a clear line between what is shared (the community's money) and what is private (each member's own trades).</p>
+    </li>
+    <li>
+      <h3>No single person holds the keys</h3>
+      <p>The most powerful keys, such as those that can restore accounts, are split so that two out of three keyholders in
+        different places must agree. Risky actions wait a day and notify the member, so they can be stopped.</p>
+      <p class="needs"><strong>What it needs:</strong> keyholders who are independent of each other, and honesty with members about what the keyholders can and cannot do.</p>
+    </li>
+    <li>
+      <h3>Freedom to leave</h3>
+      <p>If the people running a community's server abuse it, members can take a copy of the software and their records and
+        start again elsewhere. Power that can be walked away from has to behave.</p>
+      <p class="needs"><strong>What it needs:</strong> open-source software, records members can export, and no dependence on one company's domain, cloud or app store.</p>
+    </li>
+    <li>
+      <h3>Trust that is earned, not bought</h3>
+      <p>Reputation grows from real trades with many different people. Trading round in a circle with your own friends stops
+        counting after a point, so trust can't be farmed.</p>
+      <p class="needs"><strong>What it needs:</strong> limits on how much any one partner can add to your record, and ways to spot rings of fake accounts.</p>
+    </li>
+    <li>
+      <h3>Who appointed whom, on the record</h3>
+      <p>Who invited each member, who holds which role and who granted it are all recorded. Favouritism leaves a trail.</p>
+      <p class="needs"><strong>What it needs:</strong> role changes that are visible to members, and a culture of actually looking.</p>
+    </li>
+    <li>
+      <h3>Privacy for people, transparency for power</h3>
+      <p>Ordinary members' trades should be private. The decisions and spending of those with power over shared things
+        should be public. Corruption thrives when this is the other way round.</p>
+      <p class="needs"><strong>What it needs:</strong> careful design, and in the future privacy-preserving maths that proves the totals add up without exposing anyone's personal finances.</p>
+    </li>
+    <li>
+      <h3>Small units, joined up</h3>
+      <p>Corruption grows with distance from the people affected. Communities small enough that people know each other,
+        linked to others as equals, are much harder to capture than one giant system.</p>
+      <p class="needs"><strong>What it needs:</strong> software any community can run itself, and simple ways for communities to connect and trade.</p>
+    </li>
+  </ol>
+</section>
+
+</div>
+
+<section id="blockchain" class="band">
+  <div class="wrap">
+    <h2>What about blockchain?</h2>
+    <p>Blockchain is one way to build a ledger that nobody can secretly rewrite: thousands of copies, each checking the
+      others. It proved the idea works without a central bookkeeper. That matters.</p>
+    <p>But blockchain isn't the only way, and it comes with baggage:</p>
+    <ul>
+      <li>Most well-known blockchains burn large amounts of energy or need a coin, and coins attract speculators.</li>
+      <li>"Garbage in, garbage out": a ledger can stop records being changed later, but it can't stop a false record being entered in the first place.</li>
+      <li>Permanent records can't forget, which is a problem for personal data and for mistakes.</li>
+    </ul>
+    <p>The goal is what matters: <strong>a record that can't be quietly changed, and that people can check for themselves</strong>.
+      Signed entries, chained fingerprints and independently held copies can deliver that without a coin. The internet's
+      web security already relies on public "transparency logs" like this, with no blockchain involved.</p>
+    <p>A technomutualist community should pick whichever tool fits, and be honest about the trade-offs. No tokens to speculate on.</p>
+  </div>
+</section>
+
+<div class="wrap">
+
+<section id="edges" class="section">
+  <h2 class="riso">Where corruption moves to</h2>
+  <p>Here's the honest part. When you lock down the ledger, corruption doesn't vanish; it moves to the edges, to the
+    places where humans still decide:</p>
+  <ul>
+    <li><strong>Who gets in.</strong> Whoever approves new members can let in fake accounts or keep out rivals.</li>
+    <li><strong>Who gets heard.</strong> Moderators can silence critics.</li>
+    <li><strong>Who holds the keys and runs the servers.</strong> They can see more than others, and switch things off.</li>
+    <li><strong>Who controls the app stores and the law.</strong> Outside powers can still shut a project down.</li>
+  </ul>
+  <p>So technology is half the answer. The other half is governance that is just as open:</p>
+  <div class="callout">
+    <p><strong>What a trustworthy community also needs:</strong> published rules for admission and moderation, a public log
+      of moderation decisions, roles that rotate and can be recalled by members, regular transparency reports, independent
+      audits, and more than one way to install and run the software, so no single gatekeeper can stop it.</p>
+  </div>
+  <p>That's not a weakness in the idea; it's the work. Technology takes away the easy hiding places, and people have to keep
+    watching the rest. Elinor Ostrom won the Nobel Prize in economics in 2009 for showing that communities can manage shared
+    resources well for centuries when they make their own rules, watch each other fairly and settle disputes locally.
+    Technomutualism gives those communities better tools.</p>
+</section>
+
+<nav class="next" aria-label="Keep reading">
+  <p>Next: <a href="in-practice">Where it's already working →</a></p>
+</nav>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap-wide">
+    <p><strong>Technomutualism</strong> · named 1 October 2026 by the people behind
+      <a href="https://beanpool.org">The BeanPool Project</a>. The word is free for anyone to use.</p>
+    <p class="small">Text licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>: copy it, translate it, improve it.
+      Source on <a href="https://github.com/technomutualism/technomutualism.org">GitHub</a>.
+      This site sets no cookies and loads nothing from anyone else.</p>
+  </div>
+</footer>
+</body>
+</html>
