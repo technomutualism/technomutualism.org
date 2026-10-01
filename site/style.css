@@ -282,8 +282,8 @@ strong { font-weight: 700; }
 .contrast > div + div { border-top: 3px solid var(--ink); }
 .contrast h3 { margin-top: 0; font-size: 1.25rem; }
 .contrast ul { padding-left: 1.1rem; margin-bottom: 0.25rem; }
-.contrast .feudal { background: var(--paper-deep); }
-.contrast .mutual { background: var(--coral-fill); }
+.contrast .feudal { background: var(--coral-fill); }
+.contrast .mutual { background: var(--paper-light); }
 @media (min-width: 46rem) {
   .contrast { grid-template-columns: 1fr 1fr; }
   .contrast > div + div { border-top: 0; border-left: 3px solid var(--ink); }
