@@ -160,6 +160,8 @@ def main():
             return None
 
     opener = urllib.request.build_opener(NoRedirect)
+    # Cloudflare answers Python's default user agent with 403; check as a browser would arrive.
+    opener.addheaders = [("User-Agent", "Mozilla/5.0 (go-live check)")]
     deadline = time.time() + 900
     pending = list(checks)
     while pending and time.time() < deadline:
@@ -186,7 +188,7 @@ def main():
 
     # 5. A dated public record of first use
     try:
-        urllib.request.urlopen(urllib.request.Request(f"https://web.archive.org/save/https://{ORG}/", method="GET"), timeout=120)
+        urllib.request.urlopen(urllib.request.Request(f"https://web.archive.org/save/https://{ORG}/", headers={"User-Agent": "Mozilla/5.0 (go-live)"}), timeout=180)
         print(f"ok     Wayback Machine snapshot requested for https://{ORG}/")
     except Exception as e:
         print(f"note   Wayback snapshot request failed ({e}); retry at https://web.archive.org/save")
