@@ -102,13 +102,14 @@ function generateAlternatesBlock(filename, availableLanguages) {
   return lines.join('\n');
 }
 
-function generatePickerBlock(filename, currentCode) {
+function generatePickerBlock(filename, currentCode, availableLanguages) {
   const currentLang = languagesConfig.find(l => l.code === currentCode) || { name: 'English' };
   const pathPart = pageUrlPath(filename);
   const globeSvg = '<svg class="lang-globe" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>';
 
   const items = [];
-  for (const lang of languagesConfig) {
+  // Only languages that have this page: a link to a language still being translated would be a 404.
+  for (const lang of languagesConfig.filter((l) => !availableLanguages || availableLanguages.has(l.code))) {
     let href;
     if (lang.code === 'en') {
       href = pathPart ? `/${pathPart}?lang=en` : `/?lang=en`;
@@ -192,7 +193,7 @@ function processPageContent(content, filename, langCode, availableLanguages) {
   updated = updated.replace(/<!--\s*i18n:alternates\s*-->[\s\S]*?<!--\s*\/i18n:alternates\s*-->/, alternatesBlock);
 
   // 2. Picker
-  const pickerBlock = generatePickerBlock(filename, langCode);
+  const pickerBlock = generatePickerBlock(filename, langCode, availableLanguages);
   updated = updated.replace(/<!--\s*i18n:picker\s*-->[\s\S]*?<!--\s*\/i18n:picker\s*-->/, pickerBlock);
 
   // 3. MT Note

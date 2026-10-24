@@ -466,7 +466,7 @@ blockquote footer { font-size: 0.9rem; color: var(--ink-soft); margin-top: 0.25r
 .lang-picker ul {
   position: absolute;
   top: calc(100% + 4px);
-  inset-inline-end: 0;
+  inset-inline-start: 0; /* the button sits at the start of the line: open into the free space */
   z-index: 150;
   background: var(--paper-light);
   border: 2px solid var(--ink);
