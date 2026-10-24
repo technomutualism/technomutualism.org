@@ -1,6 +1,6 @@
 [
   { "code": "en", "name": "English", "dir": "ltr", "hreflang": "en", "ogLocale": "en_US" },
-  { "code": "es", "name": "Español", "dir": "ltr", "hreflang": "es", "ogLocale": "es_ES" },
+  { "code": "es", "name": "Español", "dir": "ltr", "hreflang": "es", "ogLocale": "es_419" },
   { "code": "pt", "name": "Português", "dir": "ltr", "hreflang": "pt", "ogLocale": "pt_BR" },
   { "code": "hi", "name": "हिन्दी", "dir": "ltr", "hreflang": "hi", "ogLocale": "hi_IN" },
   { "code": "bn", "name": "বাংলা", "dir": "ltr", "hreflang": "bn", "ogLocale": "bn_BD" },
