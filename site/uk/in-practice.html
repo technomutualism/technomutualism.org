@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="uk" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>На практиці — Техномутуалізм</title>
+<meta name="description" content="Проєкт BeanPool та інші діючі приклади взаємного кредиту, власності учасників і відкритих спільних ресурсів, а також те, що може змінити техномутуалізм: їжа, житло, праця, стихійні лиха тощо.">
+<link rel="canonical" href="https://technomutualism.org/uk/in-practice">
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://technomutualism.org/in-practice">
+<link rel="alternate" hreflang="es" href="https://technomutualism.org/es/in-practice">
+<link rel="alternate" hreflang="ru" href="https://technomutualism.org/ru/in-practice">
+<link rel="alternate" hreflang="uk" href="https://technomutualism.org/uk/in-practice">
+<link rel="alternate" hreflang="x-default" href="https://technomutualism.org/in-practice">
+<!-- /i18n:alternates -->
+<meta property="og:title" content="Техномутуалізм на практиці">
+<meta property="og:description" content="The BeanPool Project та інші приклади в дії, а також те, що вони можуть змінити.">
+<meta property="og:url" content="https://technomutualism.org/uk/in-practice">
+<meta property="og:image" content="https://technomutualism.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_419">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d4ddc6">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Перейти до вмісту</a>
+
+<header class="site-head">
+  <div class="wrap-wide">
+    <a class="brand" href="/uk/" aria-label="Техномутуалізм, головна">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="25" cy="32" r="15" fill="#ff7a5c"/><circle cx="39" cy="32" r="15" fill="none" stroke="#14372a" stroke-width="6"/></svg>
+      Техномутуалізм
+    </a>
+    <nav class="site-nav" aria-label="Головна">
+      <ul>
+        <li><a href="/uk/">Ідея</a></li>
+        <li><a href="/uk/history">Історія</a></li>
+        <li><a href="/uk/corruption">Влада на видноті</a></li>
+        <li><a href="/uk/in-practice" aria-current="page">На практиці</a></li>
+        <li><a href="/uk/questions">Питання</a></li>
+      </ul>
+    </nav>
+    <!-- i18n:picker -->
+    <details class="lang-picker">
+      <summary><svg class="lang-globe" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Українська</summary>
+      <ul>
+      <li><a href="/in-practice?lang=en" hreflang="en" lang="en">English</a></li>
+      <li><a href="/es/in-practice?lang=es" hreflang="es" lang="es">Español</a></li>
+      <li><a href="/pt/in-practice?lang=pt" hreflang="pt" lang="pt">Português</a></li>
+      <li><a href="/hi/in-practice?lang=hi" hreflang="hi" lang="hi">हिन्दी</a></li>
+      <li><a href="/bn/in-practice?lang=bn" hreflang="bn" lang="bn">বাংলা</a></li>
+      <li><a href="/fr/in-practice?lang=fr" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/ar/in-practice?lang=ar" hreflang="ar" lang="ar">العربية</a></li>
+      <li><a href="/id/in-practice?lang=id" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+      <li><a href="/ru/in-practice?lang=ru" hreflang="ru" lang="ru">Русский</a></li>
+      <li><a href="/zh-Hans/in-practice?lang=zh-Hans" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+      <li><a href="/zh-Hant/in-practice?lang=zh-Hant" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li>
+      <li><a href="/it/in-practice?lang=it" hreflang="it" lang="it">Italiano</a></li>
+      <li><a href="/de/in-practice?lang=de" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/tr/in-practice?lang=tr" hreflang="tr" lang="tr">Türkçe</a></li>
+      <li><a href="/sw/in-practice?lang=sw" hreflang="sw" lang="sw">Kiswahili</a></li>
+      <li><a href="/ml/in-practice?lang=ml" hreflang="ml" lang="ml">മലയാളം</a></li>
+      <li><a href="/ta/in-practice?lang=ta" hreflang="ta" lang="ta">தமிழ்</a></li>
+      <li><a href="/uk/in-practice?lang=uk" hreflang="uk" lang="uk" aria-current="true">Українська</a></li>
+      <li><a href="/ur/in-practice?lang=ur" hreflang="ur" lang="ur">اردو</a></li>
+      <li><a href="/fa/in-practice?lang=fa" hreflang="fa" lang="fa">فارسی</a></li>
+      <li><a href="/vi/in-practice?lang=vi" hreflang="vi" lang="vi">Tiếng Việt</a></li>
+      <li><a href="/el/in-practice?lang=el" hreflang="el" lang="el">Ελληνικά</a></li>
+      <li><a href="/fil/in-practice?lang=fil" hreflang="fil" lang="fil">Filipino</a></li>
+      <li><a href="/ja/in-practice?lang=ja" hreflang="ja" lang="ja">日本語</a></li>
+      <li><a href="/ko/in-practice?lang=ko" hreflang="ko" lang="ko">한국어</a></li>
+      </ul>
+    </details>
+    <!-- /i18n:picker -->
+  </div>
+</header>
+
+<main id="main">
+<!-- i18n:mt-note -->
+<aside class="mt-note" aria-label="Nota de traducción">
+  <div class="wrap">
+    <p>Ця сторінка перекладена машинним способом і може містити помилки. Оригіналом є сторінка англійською мовою. <a href="https://github.com/technomutualism/technomutualism.org">Допоможіть покращити цей переклад на GitHub</a>.</p>
+  </div>
+</aside>
+<!-- /i18n:mt-note -->
+<div class="wrap">
+
+<section class="hero hero-page">
+  <p class="kicker">На практиці</p>
+  <h1 class="riso">Це вже відбувається</h1>
+  <p class="lede">Поки небагато хто будує фортеці, громади вже створюють альтернативу, не питаючи ні в кого дозволу.
+    Її складові працюють уже сьогодні — від швейцарських компаній до сіл Кенії та двох містечок в Австралії.
+    Ось де саме і на що це здатне перетворитися.</p>
+</section>
+
+<section id="beanpool" class="section">
+  <h2 class="riso">The BeanPool Project</h2>
+  <p><strong>BeanPool</strong> — це вільне програмне забезпечення з відкритим кодом, яке дозволяє кожній громаді запустити
+    власний локальний ринок і взаємний кредит на підконтрольному їй сервері. Це перший проєкт, збудований від самого початку
+    на принципах техномутуалізму, і він уже використовується реальними громадами в Австралії.</p>
+
+  <ul class="cards">
+    <li class="card"><h3>Ринок на карті</h3><p>Учасники розміщують пропозиції та потреби: яйця, підвезення, ремонтні роботи, уроки, інструменти, події. Усе розташовано на карті місцевості.</p></li>
+    <li class="card"><h3>Beans замість банківських грошей</h3><p>Учасники розраховуються одне з одним у Beans — одиницях взаємного кредиту. Beans виникають, коли один учасник платить іншому, а всі баланси завжди в сумі дають нуль. Жодного банку, відсотків чи монети для спекуляцій.</p></li>
+    <li class="card"><h3>Кредит, який ви заробляєте</h3><p>Можливість витрат відкривається через реальний обмін і зростає разом із вашою історією. Торгівля по колу з одним і тим самим партнером перестає враховуватися, тож фальсифікувати довіру не вдасться.</p></li>
+    <li class="card"><h3>Спільний казан</h3><p>Невеликий внесок із ринкових угод та поступове згасання накопичених балансів надходять до фонду громади, який витрачається за рішенням її учасників.</p></li>
+    <li class="card"><h3>Ваші ключі — ваш акаунт</h3><p>Акаунт кожного учасника — це ключ на його власному телефоні, зафіксований у 12 словах. Платежі підписуються платником. Приватні бесіди захищені наскрізним шифруванням.</p></li>
+    <li class="card"><h3>Запускайте власноруч</h3><p>Будь-яка громада може встановити систему на власний сервер без залежності від нашого домену, наших серверів чи нашого дозволу. Громади можуть з'єднуватися і торгувати між собою.</p></li>
+  </ul>
+
+  <p>Він працює як додаток на Android та iPhone, а також у будь-якому веб-браузері. Наразі створюється спільне сховище ключів,
+    яке триматимуть незалежні зберігачі в різних країнах, аби втрата телефону ніколи не призводила до втрати акаунта.</p>
+  <p><a class="button" href="https://beanpool.org">Відвідати The BeanPool Project</a><a class="button secondary" href="https://github.com/beanpool-org/beanpool">Ознайомитися з кодом</a></p>
+  <p class="note">BeanPool — це одна зі спроб, але не єдина. Його код відкритий під ліцензією MIT саме для того, щоб інші
+    могли копіювати його, робити форки та будувати щось краще. Сама ідея набагато важливіша за перемогу будь-якого окремого проєкту.</p>
+</section>
+
+<section id="others" class="section">
+  <h2 class="riso">Інші приклади, що вказують у той самий бік</h2>
+  <ul class="cards">
+    <li class="card"><h3>WIR, Швейцарія</h3><p>З 1934 року десятки тисяч малих бізнесів кредитують одне одного через кооперативну мережу. Дослідження економіста Джеймса Стоддера показали, що її обіг зростає під час криз, стабілізуючи місцеву економіку саме тоді, коли банки припиняють видавати позики.</p></li>
+    <li class="card"><h3>Sardex, Сардинія</h3><p>З 2010 року тисячі підприємств на острові, який важко переживав фінансову кризу, ведуть торгівлю на основі взаємного кредиту замість очікування банківських позик.</p></li>
+    <li class="card"><h3>Мережа Sarafu, Кенія</h3><p>Місцеві валюти під егідою неприбуткової організації Grassroots Economics допомагають селам і неформальним поселенням обмінюватися їжею, водою та оплачувати навчання дітей, коли не вистачає шилінгів.</p></li>
+    <li class="card"><h3>Mondragon, Іспанія</h3><p>З 1956 року мережа кооперативів у Країні Басків, що переважно належать працівникам, виросла до десятків тисяч працівників, маючи власний банк, університет та супермаркети.</p></li>
+    <li class="card"><h3>Кредитні спілки у всьому світі</h3><p>Фінансові кооперативи у власності своїх членів, що охоплюють сотні мільйонів людей у світі. Прибуток повертається учасникам, а не стороннім акціонерам.</p></li>
+    <li class="card"><h3>Громадські земельні трасти</h3><p>Від появи першого з них у штаті Джорджія (США) у 1969 році громади тримають землю у спільній власності та стримують ціни перепродажу, зберігаючи житло на ній доступним на десятиліття.</p></li>
+    <li class="card"><h3>Банки часу</h3><p>Година допомоги дає право на годину взаємної підтримки від кого завгодно. Використовуються по всьому світу для догляду за дітьми, літніми людьми та побутових справ.</p></li>
+    <li class="card"><h3>Wikipedia та Linux</h3><p>Підтвердження того, що масштабні спільноти, об'єднуючи свою працю, здатні створювати речі, які на рівних змагаються з найбільшими світовими корпораціями.</p></li>
+  </ul>
+</section>
+
+</div>
+
+<section id="could-change" class="band">
+  <div class="wrap">
+    <h2>Що це могло б змінити</h2>
+    <p>З'єднайте ці складові разом з інструментами, якими може володіти кожна громада, — і ось що стає реальним.</p>
+
+    <h3>Їжа</h3>
+    <p>Господарі заздалегідь продають урожай сусідам, обмінюються надлишками, розсадою та працею без супермаркетів, які забирають
+      собі маржу. Громади, які самостійно вирощують і розподіляють харчі, менш уразливі до криз постачання та здирницьких цін.</p>
+
+    <h3>Житло та земля</h3>
+    <p>Земля у спільній власності земельних трастів та чітко закріплені права на її користування убезпечують оселі від спекуляцій,
+      тож життя в будинку не змушує сплачувати оренду людині, яка ніколи там не з'являється.</p>
+
+    <h3>Робота, коли грошей бракує</h3>
+    <p>Під час кризи сама праця і потреби нікуди не зникають — зникають лише гроші. Взаємний кредит дає змогу сантехніку, пекарю
+      та вчителеві обмінюватися послугами навіть тоді, коли ні в кого немає готівки, як це доводить WIR уже дев'яносто років.</p>
+
+    <h3>Місця з нестабільною валютою</h3>
+    <p>Там, де національна валюта падає або банки недосяжні, власний кредит громади на вже наявних смартфонах тримає місцеву торгівлю.
+      На відміну від паперових талонів, підписані цифрові кредити неможливо сфальсифікувати без ключа власника.</p>
+
+    <h3>Після стихійних лих</h3>
+    <p>Під час повеней чи пожеж сусіди першими приходять на допомогу. Готова місцева мережа для надання прихистку, інструментів, їжі
+      та допомоги руками, а також для фіксації того, хто кому допоміг, перетворює добру волю на злагоджене відновлення.</p>
+
+    <h3>Турбота</h3>
+    <p>Догляд за дітьми, хворими та літніми людьми становить більшу частину неоплачуваної праці на планеті. Фіксація її як справжнього
+      внеску, як це роблять банки часу, дає їй належну вагу.</p>
+
+    <h3>Організація без стеження</h3>
+    <p>Групові чати з наскрізним шифруванням на сервері громади: створення продовольчого кооперативу, профспілки чи організація протесту не залежать від платформи, яка може вас відключити або бути змушеною видати ваші повідомлення.</p>
+    <h3>Чесні інституції</h3>
+    <p>Клуби, кооперативи, профспілки та місцеві ради могли б вести свої бюджети й голосування на основі відкритих, підписаних записів.
+      Не тому, що люди погані, а тому, що ніхто не мусить вірити комусь на слово.</p>
+  </div>
+</section>
+
+<div class="wrap">
+
+<section id="start" class="section">
+  <h2 class="riso">Як розпочати</h2>
+  <ol>
+    <li><strong>Знайдіть однодумців.</strong> Кілька сусідів, які вже торгують, діляться або допомагають одне одному: ярмарок, садівництво, вулиця, клуб.</li>
+    <li><strong>Оберіть інструменти.</strong> Спробуйте <a href="https://beanpool.org">BeanPool</a> або будь-який відкритий інструмент, яким ваша громада здатна володіти й керувати.</li>
+    <li><strong>Запишіть свої правила.</strong> Хто може приєднатися, як вирішуються конфлікти, як витрачається спільний фонд. Оприлюдніть їх.</li>
+    <li><strong>Почніть із малого і справжнього.</strong> Обмінюйтеся реальними речами, які дійсно потрібні людям. Нехай проєкт росте від цього фундаменту.</li>
+    <li><strong>Єднайтеся.</strong> Зв'язуйтеся з іншими громадами як рівні та діліться тим, чого навчилися.</li>
+  </ol>
+</section>
+
+<nav class="next" aria-label="Продовжити читання">
+  <p>Далі: <a href="/uk/questions">Поширені запитання →</a></p>
+</nav>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap-wide">
+    <p><strong>technomutualism.org</strong> · започатковано в жовтні 2026 року людьми, які створили
+      <a href="https://beanpool.org">The BeanPool Project</a>. Це слово вільне для використання будь-ким.</p>
+    <p class="small">Текст ліцензовано на умовах <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>: копіюйте, перекладайте, вдосконалюйте.
+      Вихідний код на <a href="https://github.com/technomutualism/technomutualism.org">GitHub</a>.
+      Цей сайт не використовує файли cookie і нічого не завантажує зі сторонніх серверів.</p>
+  </div>
+</footer>
+</body>
+</html>
