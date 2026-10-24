@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="vi" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trong thực tiễn — Chủ nghĩa tương hỗ công nghệ</title>
+<meta name="description" content="The BeanPool Project và các ví dụ thực tế khác về tín dụng tương hỗ, quyền sở hữu của thành viên và tài sản chung mở, cùng những gì chủ nghĩa tương hỗ công nghệ có thể thay đổi: lương thực, nhà ở, việc làm, thảm họa và hơn thế nữa.">
+<link rel="canonical" href="https://technomutualism.org/vi/in-practice">
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://technomutualism.org/in-practice">
+<link rel="alternate" hreflang="es" href="https://technomutualism.org/es/in-practice">
+<link rel="alternate" hreflang="id" href="https://technomutualism.org/id/in-practice">
+<link rel="alternate" hreflang="vi" href="https://technomutualism.org/vi/in-practice">
+<link rel="alternate" hreflang="x-default" href="https://technomutualism.org/in-practice">
+<!-- /i18n:alternates -->
+<meta property="og:title" content="Chủ nghĩa tương hỗ công nghệ trong thực tiễn">
+<meta property="og:description" content="The BeanPool Project và các ví dụ thực tế khác, cùng những gì chúng có thể thay đổi.">
+<meta property="og:url" content="https://technomutualism.org/vi/in-practice">
+<meta property="og:image" content="https://technomutualism.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_419">
+<meta property="og:locale:alternate" content="id_ID">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d4ddc6">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Chuyển đến nội dung</a>
+
+<header class="site-head">
+  <div class="wrap-wide">
+    <a class="brand" href="/vi/" aria-label="Chủ nghĩa tương hỗ công nghệ, trang chủ">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="25" cy="32" r="15" fill="#ff7a5c"/><circle cx="39" cy="32" r="15" fill="none" stroke="#14372a" stroke-width="6"/></svg>
+      Chủ nghĩa tương hỗ công nghệ
+    </a>
+    <nav class="site-nav" aria-label="Chính">
+      <ul>
+        <li><a href="/vi/">Ý tưởng</a></li>
+        <li><a href="/vi/history">Lịch sử</a></li>
+        <li><a href="/vi/corruption">Quyền lực công khai</a></li>
+        <li><a href="/vi/in-practice" aria-current="page">Trong thực tiễn</a></li>
+        <li><a href="/vi/questions">Câu hỏi</a></li>
+      </ul>
+    </nav>
+    <!-- i18n:picker -->
+    <details class="lang-picker">
+      <summary><svg class="lang-globe" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Tiếng Việt</summary>
+      <ul>
+      <li><a href="/in-practice?lang=en" hreflang="en" lang="en">English</a></li>
+      <li><a href="/es/in-practice?lang=es" hreflang="es" lang="es">Español</a></li>
+      <li><a href="/pt/in-practice?lang=pt" hreflang="pt" lang="pt">Português</a></li>
+      <li><a href="/hi/in-practice?lang=hi" hreflang="hi" lang="hi">हिन्दी</a></li>
+      <li><a href="/bn/in-practice?lang=bn" hreflang="bn" lang="bn">বাংলা</a></li>
+      <li><a href="/fr/in-practice?lang=fr" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/ar/in-practice?lang=ar" hreflang="ar" lang="ar">العربية</a></li>
+      <li><a href="/id/in-practice?lang=id" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+      <li><a href="/ru/in-practice?lang=ru" hreflang="ru" lang="ru">Русский</a></li>
+      <li><a href="/zh-Hans/in-practice?lang=zh-Hans" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+      <li><a href="/zh-Hant/in-practice?lang=zh-Hant" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li>
+      <li><a href="/it/in-practice?lang=it" hreflang="it" lang="it">Italiano</a></li>
+      <li><a href="/de/in-practice?lang=de" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/tr/in-practice?lang=tr" hreflang="tr" lang="tr">Türkçe</a></li>
+      <li><a href="/sw/in-practice?lang=sw" hreflang="sw" lang="sw">Kiswahili</a></li>
+      <li><a href="/ml/in-practice?lang=ml" hreflang="ml" lang="ml">മലയാളം</a></li>
+      <li><a href="/ta/in-practice?lang=ta" hreflang="ta" lang="ta">தமிழ்</a></li>
+      <li><a href="/uk/in-practice?lang=uk" hreflang="uk" lang="uk">Українська</a></li>
+      <li><a href="/ur/in-practice?lang=ur" hreflang="ur" lang="ur">اردو</a></li>
+      <li><a href="/fa/in-practice?lang=fa" hreflang="fa" lang="fa">فارسی</a></li>
+      <li><a href="/vi/in-practice?lang=vi" hreflang="vi" lang="vi" aria-current="true">Tiếng Việt</a></li>
+      <li><a href="/el/in-practice?lang=el" hreflang="el" lang="el">Ελληνικά</a></li>
+      <li><a href="/fil/in-practice?lang=fil" hreflang="fil" lang="fil">Filipino</a></li>
+      <li><a href="/ja/in-practice?lang=ja" hreflang="ja" lang="ja">日本語</a></li>
+      <li><a href="/ko/in-practice?lang=ko" hreflang="ko" lang="ko">한국어</a></li>
+      </ul>
+    </details>
+    <!-- /i18n:picker -->
+  </div>
+</header>
+
+<main id="main">
+<!-- i18n:mt-note -->
+<aside class="mt-note" aria-label="Ghi chú về bản dịch">
+  <div class="wrap">
+    <p>Trang này được dịch bằng máy và có thể có sai sót. Trang tiếng Anh là bản gốc. <a href="https://github.com/technomutualism/technomutualism.org">Hãy giúp cải thiện bản dịch này trên GitHub</a>.</p>
+  </div>
+</aside>
+<!-- /i18n:mt-note -->
+<div class="wrap">
+
+<section class="hero hero-page">
+  <p class="kicker">Trong thực tiễn</p>
+  <h1 class="riso">Điều này đã và đang diễn ra</h1>
+  <p class="lede">Trong khi một số ít người xây dựng các pháo đài, các cộng đồng đã và đang xây dựng phương án thay thế mà không cần chờ đợi sự cho phép của ai. Nhiều phần của nó đang vận hành hôm nay, từ các doanh nghiệp Thụy Sĩ đến các ngôi làng ở Kenya cho đến hai thị trấn ở Úc. Dưới đây là những nơi điều đó đang diễn ra, và tiềm năng phát triển của nó.</p>
+</section>
+
+<section id="beanpool" class="section">
+  <h2 class="riso">The BeanPool Project</h2>
+  <p><strong>BeanPool</strong> là phần mềm mã nguồn mở miễn phí cho phép bất kỳ cộng đồng nào tự vận hành khu chợ địa phương và hệ thống tín dụng tương hỗ của riêng mình, trên máy chủ do cộng đồng kiểm soát. Đây là dự án đầu tiên được xây dựng từ nền tảng theo định hướng chủ nghĩa tương hỗ công nghệ, và đã được các cộng đồng thực tế ở Úc sử dụng.</p>
+
+  <ul class="cards">
+    <li class="card"><h3>Khu chợ trên bản đồ</h3><p>Thành viên đăng những gì họ cung cấp và những gì họ cần: trứng, đi nhờ xe, sửa chữa, gia sư, dụng cụ, sự kiện. Mọi thứ hiển thị trên bản đồ của khu vực địa phương.</p></li>
+    <li class="card"><h3>Beans, không phải tiền ngân hàng</h3><p>Các thành viên thanh toán cho nhau bằng Beans, một loại tín dụng tương hỗ. Beans được tạo ra khi một thành viên trả tiền cho một thành viên khác, và tổng tất cả các số dư luôn bằng không. Không ngân hàng, không lãi suất, không đồng tiền để đầu cơ.</p></li>
+    <li class="card"><h3>Tín dụng đạt được qua uy tín</h3><p>Hạn mức chi tiêu mở ra thông qua các giao dịch thực tế và tăng dần theo lịch sử của bạn. Giao dịch lòng vòng với cùng một đối tác sẽ không còn được tính, do đó lòng tin không thể bị làm giả.</p></li>
+    <li class="card"><h3>Một quỹ chung</h3><p>Một khoản phí nhỏ trên các giao dịch mua bán và sự giảm dần chậm rãi đối với các số dư tích trữ sẽ chảy vào quỹ cộng đồng, được chi tiêu theo cách các thành viên quyết định.</p></li>
+    <li class="card"><h3>Khóa của bạn, tài khoản của bạn</h3><p>Tài khoản của mỗi thành viên là một khóa trên chính điện thoại của họ, được sao lưu dưới dạng 12 từ khóa. Các khoản thanh toán đều được ký bởi người trả tiền. Trò chuyện riêng tư được mã hóa đầu cuối.</p></li>
+    <li class="card"><h3>Tự vận hành</h3><p>Bất kỳ cộng đồng nào cũng có thể cài đặt phần mềm trên máy chủ của riêng mình, không phụ thuộc vào tên miền của chúng tôi, máy chủ của chúng tôi hay sự cho phép của chúng tôi. Các cộng đồng có thể kết nối và trao đổi buôn bán với nhau.</p></li>
+  </ul>
+
+  <p>Nó chạy như một ứng dụng trên Android và iPhone, cũng như trong bất kỳ trình duyệt web nào. Một kho lưu trữ khóa dùng chung, do các bên lưu ký độc lập ở các quốc gia khác nhau nắm giữ, đang được xây dựng để việc mất điện thoại không bao giờ đồng nghĩa với việc mất tài khoản.</p>
+  <p><a class="button" href="https://beanpool.org">Ghé thăm The BeanPool Project</a><a class="button secondary" href="https://github.com/beanpool-org/beanpool">Xem mã nguồn</a></p>
+  <p class="note">BeanPool là một nỗ lực, không phải là nỗ lực duy nhất. Mã nguồn của nó được phát hành miễn phí theo giấy phép MIT chính là để những người khác có thể sao chép, tạo nhánh phát triển (fork) và xây dựng thứ gì đó tốt hơn. Ý tưởng quan trọng hơn bất kỳ một dự án đơn lẻ nào chiến thắng.</p>
+</section>
+
+<section id="others" class="section">
+  <h2 class="riso">Những người khác cùng hướng tới một mục tiêu</h2>
+  <ul class="cards">
+    <li class="card"><h3>WIR, Thụy Sĩ</h3><p>Kể từ năm 1934, hàng chục nghìn doanh nghiệp nhỏ đã cấp tín dụng cho nhau thông qua một mạng lưới hợp tác xã. Các nghiên cứu của nhà kinh tế học James Stodder nhận thấy nó hoạt động nhộn nhịp hơn trong các thời kỳ suy thoái, giúp ổn định nền kinh tế địa phương đúng lúc các ngân hàng thắt chặt cho vay.</p></li>
+    <li class="card"><h3>Sardex, Sardinia</h3><p>Kể từ năm 2010, hàng nghìn doanh nghiệp trên một hòn đảo bị ảnh hưởng nặng nề bởi cuộc khủng hoảng tài chính đã giao dịch bằng tín dụng tương hỗ thay vì chờ đợi các khoản vay ngân hàng.</p></li>
+    <li class="card"><h3>Mạng lưới Sarafu, Kenya</h3><p>Các đồng tiền cộng đồng do tổ chức phi lợi nhuận Grassroots Economics vận hành giúp các ngôi làng và khu định cư không chính thức duy trì việc trao đổi lương thực, nước uống và học phí khi đồng shilling trở nên khan hiếm.</p></li>
+    <li class="card"><h3>Mondragon, Tây Ban Nha</h3><p>Kể từ năm 1956, mạng lưới các hợp tác xã phần lớn do người lao động làm chủ ở Xứ Basque đã phát triển lên tới hàng chục nghìn lao động, với ngân hàng, trường đại học và các siêu thị của riêng mình.</p></li>
+    <li class="card"><h3>Các hợp tác xã tín dụng, trên toàn thế giới</h3><p>Các hợp tác xã tài chính thuộc sở hữu của chính các thành viên, với hàng trăm triệu thành viên trên khắp thế giới. Lợi nhuận quay trở lại với các thành viên, không chảy vào túi các cổ đông bên ngoài.</p></li>
+    <li class="card"><h3>Các quỹ tín thác đất cộng đồng</h3><p>Kể từ quỹ đầu tiên ở Georgia, Hoa Kỳ, vào năm 1969, các cộng đồng đã nắm giữ đất đai chung và hạn chế giá bán lại, để những ngôi nhà trên đó duy trì mức giá phải chăng trong dài hạn.</p></li>
+    <li class="card"><h3>Các ngân hàng thời gian</h3><p>Một giờ giúp đỡ mang lại một giờ nhận giúp đỡ sau này, bất kể ai là người cho đi. Được sử dụng trên toàn thế giới cho việc trông trẻ, chăm sóc người già và các công việc vặt.</p></li>
+    <li class="card"><h3>Wikipedia và Linux</h3><p>Bằng chứng cho thấy các cộng đồng lớn cùng chia sẻ công việc có thể xây dựng những thứ cạnh tranh với các công ty lớn nhất, ở quy mô toàn cầu.</p></li>
+  </ul>
+</section>
+
+</div>
+
+<section id="could-change" class="band">
+  <div class="wrap">
+    <h2>Điều này có thể thay đổi những gì</h2>
+    <p>Đặt những mảnh ghép đó lại với nhau, cùng với các công cụ mà mọi cộng đồng đều có thể sở hữu, và đây là những gì trở nên khả thi.</p>
+
+    <h3>Lương thực thực phẩm</h3>
+    <p>Người trồng trọt bán trước mùa màng cho láng giềng, trao đổi phần thặng dư, buôn bán cây giống và đổi công lao động, mà không cần một siêu thị đứng ở giữa ăn chênh lệch lợi nhuận. Các cộng đồng tự trồng và buôn bán lương thực của mình sẽ ít bị tổn thương hơn trước các cú sốc nguồn cung và tình trạng nâng giá cắt cổ.</p>
+
+    <h3>Nhà ở và đất đai</h3>
+    <p>Đất đai được nắm giữ chung thông qua các quỹ tín thác đất, cùng với quyền sử dụng được ghi nhận, có thể giữ cho nhà ở nằm ngoài trò chơi đầu cơ, để việc sống ở một nơi nào đó không đồng nghĩa với việc trả tiền thuê cho một người chẳng bao giờ ghé thăm.</p>
+
+    <h3>Việc làm khi khan hiếm tiền mặt</h3>
+    <p>Trong thời kỳ suy thoái, công việc và các nhu cầu không hề biến mất; chỉ có tiền là biến mất. Tín dụng tương hỗ cho phép một thợ sửa ống nước, một thợ làm bánh và một giáo viên tiếp tục trao đổi buôn bán với nhau ngay cả khi không ai có tiền mặt, như WIR đã chứng minh trong chín mươi năm qua.</p>
+
+    <h3>Những nơi có tiền tệ bất ổn</h3>
+    <p>Ở những nơi đồng nội tệ sụp đổ hoặc các ngân hàng nằm ngoài tầm với, tín dụng của chính cộng đồng, trên những chiếc điện thoại mà mọi người đã có sẵn, sẽ duy trì sự sống cho hoạt động thương mại địa phương. Không giống như các phiếu giấy, tín dụng kỹ thuật số có chữ ký số không thể bị làm giả nếu không có khóa của chủ sở hữu.</p>
+
+    <h3>Sau thảm họa</h3>
+    <p>Khi lũ lụt hoặc hỏa hoạn ập đến, láng giềng là những người ứng cứu đầu tiên. Một mạng lưới địa phương có sẵn để cung cấp chỗ ngủ, dụng cụ, thực phẩm và nhân lực, đồng thời theo dõi ai đã giúp đỡ ai, sẽ biến thiện chí thành sự phục hồi có tổ chức.</p>
+
+    <h3>Chăm sóc</h3>
+    <p>Chăm sóc trẻ em, người bệnh và người già chiếm phần lớn công việc không được trả lương trên thế giới. Ghi nhận nó như một sự đóng góp thực sự, giống như cách các ngân hàng thời gian làm, sẽ khiến nó được trân trọng và có giá trị.</p>
+
+    <h3>Tổ chức mà không bị theo dõi</h3>
+    <p>Các cuộc trò chuyện nhóm được mã hóa đầu cuối, trên máy chủ do cộng đồng tự vận hành, nhờ đó việc tổ chức một hợp tác xã thực phẩm, một công đoàn hay một cuộc tuần hành không còn phụ thuộc vào một nền tảng có thể tắt tài khoản của bạn hoặc bị ép buộc giao nộp tin nhắn của bạn.</p>
+
+    <h3>Các thể chế trung thực</h3>
+    <p>Các câu lạc bộ, hợp tác xã, công đoàn và hội đồng thị trấn có thể vận hành tài chính và các cuộc bỏ phiếu của mình dựa trên các bản ghi mở, có chữ ký số. Không phải vì con người là xấu xa, mà vì không ai phải chỉ đơn thuần tin vào lời nói suông của người khác.</p>
+  </div>
+</section>
+
+<div class="wrap">
+
+<section id="start" class="section">
+  <h2 class="riso">Cách bắt đầu</h2>
+  <ol>
+    <li><strong>Tìm những người đồng hành của bạn.</strong> Một nhóm nhỏ láng giềng đã buôn bán, trao đổi hoặc giúp đỡ lẫn nhau: một khu chợ, một khu vườn, một con phố, một câu lạc bộ.</li>
+    <li><strong>Chọn công cụ của bạn.</strong> Hãy thử <a href="https://beanpool.org">BeanPool</a>, hoặc bất kỳ công cụ mở nào mà cộng đồng của bạn có thể sở hữu và vận hành.</li>
+    <li><strong>Ghi lại các quy tắc của bạn.</strong> Ai có thể tham gia, tranh chấp được giải quyết như thế nào, quỹ chung được chi tiêu ra sao. Hãy công bố các quy tắc đó.</li>
+    <li><strong>Bắt đầu từ quy mô nhỏ và thực tế.</strong> Trao đổi những thứ thực tế mà mọi người thực sự cần. Hãy để nó phát triển từ đó.</li>
+    <li><strong>Kết nối.</strong> Liên kết với các cộng đồng khác như những người bình đẳng, và chia sẻ những gì bạn học hỏi được.</li>
+  </ol>
+</section>
+
+<nav class="next" aria-label="Đọc tiếp">
+  <p>Tiếp theo: <a href="/vi/questions">Các câu hỏi thường gặp →</a></p>
+</nav>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap-wide">
+    <p><strong>technomutualism.org</strong> · khởi xướng vào tháng 10 năm 2026 bởi những người đứng sau
+      <a href="https://beanpool.org">The BeanPool Project</a>. Từ này tự do để bất kỳ ai sử dụng.</p>
+    <p class="small">Văn bản được cấp phép theo <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>: sao chép, dịch thuật, cải thiện.
+      Mã nguồn trên <a href="https://github.com/technomutualism/technomutualism.org">GitHub</a>.
+      Trang web này không lưu cookie và không tải bất cứ thứ gì từ bên thứ ba.</p>
+  </div>
+</footer>
+</body>
+</html>
