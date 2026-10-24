@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="zh-Hant" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>陽光下的權力 — 技術互助主義</title>
+<meta name="description" content="貪腐需要對共有資產擁有隱密且不受監督的控制權。數位簽章、公開規則、分散金鑰與隨時離開的自由，徹底剝奪了暗箱作業的空間。各項機制所需條件，以及區塊鏈在其中的定位。">
+<link rel="canonical" href="https://technomutualism.org/zh-Hant/corruption">
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://technomutualism.org/corruption">
+<link rel="alternate" hreflang="es" href="https://technomutualism.org/es/corruption">
+<link rel="alternate" hreflang="zh-Hans" href="https://technomutualism.org/zh-Hans/corruption">
+<link rel="alternate" hreflang="zh-Hant" href="https://technomutualism.org/zh-Hant/corruption">
+<link rel="alternate" hreflang="x-default" href="https://technomutualism.org/corruption">
+<!-- /i18n:alternates -->
+<meta property="og:title" content="從制度設計上根絕貪腐">
+<meta property="og:description" content="科技如何掃除貪腐與專制控制的十二個隱蔽角落，以及各項機制落實所需的條件。">
+<meta property="og:url" content="https://technomutualism.org/zh-Hant/corruption">
+<meta property="og:image" content="https://technomutualism.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d4ddc6">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳至主要內容</a>
+
+<header class="site-head">
+  <div class="wrap-wide">
+    <a class="brand" href="/zh-Hant/" aria-label="技術互助主義，首頁">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="25" cy="32" r="15" fill="#ff7a5c"/><circle cx="39" cy="32" r="15" fill="none" stroke="#14372a" stroke-width="6"/></svg>
+      技術互助主義
+    </a>
+    <nav class="site-nav" aria-label="主要導覽">
+      <ul>
+        <li><a href="/zh-Hant/">核心理念</a></li>
+        <li><a href="/zh-Hant/history">歷史淵源</a></li>
+        <li><a href="/zh-Hant/corruption" aria-current="page">陽光下的權力</a></li>
+        <li><a href="/zh-Hant/in-practice">實踐應用</a></li>
+        <li><a href="/zh-Hant/questions">常見問答</a></li>
+      </ul>
+    </nav>
+    <!-- i18n:picker -->
+    <details class="lang-picker">
+      <summary><svg class="lang-globe" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> 繁體中文</summary>
+      <ul>
+      <li><a href="/corruption?lang=en" hreflang="en" lang="en">English</a></li>
+      <li><a href="/es/corruption?lang=es" hreflang="es" lang="es">Español</a></li>
+      <li><a href="/pt/corruption?lang=pt" hreflang="pt" lang="pt">Português</a></li>
+      <li><a href="/hi/corruption?lang=hi" hreflang="hi" lang="hi">हिन्दी</a></li>
+      <li><a href="/bn/corruption?lang=bn" hreflang="bn" lang="bn">বাংলা</a></li>
+      <li><a href="/fr/corruption?lang=fr" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/ar/corruption?lang=ar" hreflang="ar" lang="ar">العربية</a></li>
+      <li><a href="/id/corruption?lang=id" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+      <li><a href="/ru/corruption?lang=ru" hreflang="ru" lang="ru">Русский</a></li>
+      <li><a href="/zh-Hans/corruption?lang=zh-Hans" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+      <li><a href="/zh-Hant/corruption?lang=zh-Hant" hreflang="zh-Hant" lang="zh-Hant" aria-current="true">繁體中文</a></li>
+      <li><a href="/it/corruption?lang=it" hreflang="it" lang="it">Italiano</a></li>
+      <li><a href="/de/corruption?lang=de" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/tr/corruption?lang=tr" hreflang="tr" lang="tr">Türkçe</a></li>
+      <li><a href="/sw/corruption?lang=sw" hreflang="sw" lang="sw">Kiswahili</a></li>
+      <li><a href="/ml/corruption?lang=ml" hreflang="ml" lang="ml">മലയാളം</a></li>
+      <li><a href="/ta/corruption?lang=ta" hreflang="ta" lang="ta">தமிழ்</a></li>
+      <li><a href="/uk/corruption?lang=uk" hreflang="uk" lang="uk">Українська</a></li>
+      <li><a href="/ur/corruption?lang=ur" hreflang="ur" lang="ur">اردو</a></li>
+      <li><a href="/fa/corruption?lang=fa" hreflang="fa" lang="fa">فارسی</a></li>
+      <li><a href="/vi/corruption?lang=vi" hreflang="vi" lang="vi">Tiếng Việt</a></li>
+      <li><a href="/el/corruption?lang=el" hreflang="el" lang="el">Ελληνικά</a></li>
+      <li><a href="/fil/corruption?lang=fil" hreflang="fil" lang="fil">Filipino</a></li>
+      <li><a href="/ja/corruption?lang=ja" hreflang="ja" lang="ja">日本語</a></li>
+      <li><a href="/ko/corruption?lang=ko" hreflang="ko" lang="ko">한국어</a></li>
+      </ul>
+    </details>
+    <!-- /i18n:picker -->
+  </div>
+</header>
+
+<main id="main">
+<!-- i18n:mt-note -->
+<aside class="mt-note" aria-label="Nota de traducción">
+  <div class="wrap">
+    <p>本頁面由機器翻譯，可能含有錯誤。英文頁面為原始版本。<a href="https://github.com/technomutualism/technomutualism.org">在 GitHub 上協助改進此翻譯</a>。</p>
+  </div>
+</aside>
+<!-- /i18n:mt-note -->
+<div class="wrap">
+
+<section class="hero hero-page">
+  <p class="kicker">陽光下的權力</p>
+  <h1 class="riso">掃除一切暗箱空間</h1>
+  <p class="lede">貪腐、全面監控與專制控制都需要同一種溫床：對共有資產擁有無人能察覺、亦無人能阻止的隱蔽支配權。高牆堡壘的未來正是奠基在這種權力之上。科技無法保證人人心地善良，但科技能讓企圖暗中操控共有資產的行徑無所遁形。</p>
+</section>
+
+<section class="section">
+  <p>想一想貪腐究竟是如何在現實中發生的。官員偷偷竄改地籍謄本。出納擅自將公款在不同帳戶間搬移挪用。銀行私相授受放貸給高層好友。平台暗中修改推薦演算法偏袒自營商品。投票箱在運送途中離奇失蹤。每一起弊端的核心，都源於<strong>有人一手掌控著其他人無法即時查核驗證的黑箱紀錄</strong>。</p>
+  <p>技術互助主義從正面直擊這個結構死角。以下列出十二項關鍵解方，並如實剖析每一項機制在現實中真正落地所需的必備條件。</p>
+
+  <ol class="fixes">
+    <li>
+      <h3>每筆支付皆由付款人親自簽署</h3>
+      <p>每位成員都在自己的隨身手機上持有一組私密金鑰，通常以12個備份助記詞保管。任何支付交易唯有經過該金鑰的數位簽章才具備法律效力。若沒有你的私鑰，無論是伺服器管理員、系統工程師還是頂尖駭客，都無法替你花費任何一分錢。</p>
+      <p class="needs"><strong>落實所需條件：</strong>成員必須自行妥善保管私密金鑰，並具備一套簡單安全、且無須將金鑰拱手讓人的帳號復原機制。</p>
+    </li>
+    <li>
+      <h3>內部特權人士無法無中生有印鈔</h3>
+      <p>在互助信用體系中，貨幣唯有在一位成員付款給另一位成員時才會生成：一方餘額增加，另一方餘額必然減少完全相同的數額。整體系統的所有餘額加總永遠維持為零。沒有任何中央銀行、財務長或「高層的朋友」能夠無中生有創造出額外資產。</p>
+      <p class="needs"><strong>落實所需條件：</strong>信用額度的核發標準必須依循公開發布的客觀準則（例如成員長期的真實交易歷史），而非取決於任何特定掌權者的個人私心核准。</p>
+    </li>
+    <li>
+      <h3>所有遊戲規則皆為開放原始碼</h3>
+      <p>手續費計算方式、額度上限與投票機制全部以開放原始碼軟體形式明文撰寫，任何人皆可公開查閱。「規則」不再是當權者本週心情好壞隨口說了算的東西。</p>
+      <p class="needs"><strong>落實所需條件：</strong>所有原始碼完全公開發布，每一次版本更新皆留下公開變更紀錄，並輔以通俗平實的日常語言說明，讓不具程式背景的普羅大眾也能輕鬆理解掌握。</p>
+    </li>
+    <li>
+      <h3>任何竄改皆無所遁形的防竄改帳本</h3>
+      <p>每一筆交易紀錄都可以帶有先前所有紀錄的數位指紋（雜湊值），因此只要有人試圖竄改任何一筆歷史紀錄，後續所有數位指紋都會瞬間失效斷裂。由不同成員分別獨立持有的副本，能夠第一時間揪出哪一份帳本曾遭到非法動過手腳。</p>
+      <p class="needs"><strong>落實所需條件：</strong>帳本副本必須分散由互無隸屬關係的多方人士妥善保存，且社群中必須有人定期落實查核比對。</p>
+    </li>
+    <li>
+      <h3>由程式碼自動忠實落實的集體決策</h3>
+      <p>當成員投票決議動用共同儲蓄基金時，軟體程式會嚴格依據投票通過的結果自動撥款。沒有任何特定官員能夠藉故「遺忘」、蓄意拖延，或是偷偷將公款改發給自己的親朋好友。</p>
+      <p class="needs"><strong>落實所需條件：</strong>預先制定經全體共識認可的公平投票準則（誰有投票權、投票門檻需達多少比率），以及嚴密防範假帳號人頭灌票的驗證機制。</p>
+    </li>
+    <li>
+      <h3>公有共同基金完全攤在陽光下</h3>
+      <p>社區公有基金（例如來自市集微額手續費，或是針對長期積欠閒置信用所收取的溫和持有成本）全數匯入一個公共資產池，其中的每一筆資金流向與開支，全體成員皆能隨時檢視。</p>
+      <p class="needs"><strong>落實所需條件：</strong>在屬於社區共有的公共財產，與屬於個別成員的私密個人交易之間，劃出涇渭分明的隱私保護界線。</p>
+    </li>
+    <li>
+      <h3>沒有任何單一個人能獨攬關鍵金鑰</h3>
+      <p>系統中最高權限的管理金鑰（例如協助遺失者復原帳號的金鑰）必須經過分割處理，強制要求分散在不同地點的三位金鑰保管人中至少有兩位同時簽署才能生效。高風險操作更會延遲一天執行並主動警示成員，以便當事人能及時攔阻危機。</p>
+      <p class="needs"><strong>落實所需條件：</strong>金鑰保管人之間必須保持獨立、互無利益牽扯，並向全體成員坦誠公開保管人到底能做什麼、不能做什麼。</p>
+    </li>
+    <li>
+      <h3>隨時能自由退出的權利</h3>
+      <p>如果負責維運社區伺服器的人員濫用特權，成員隨時可以完整打包匯出軟體與歷史紀錄，在其他地方另起爐灶。隨時會被大家揮揮衣袖離開的權力，被迫必須自律守法。</p>
+      <p class="needs"><strong>落實所需條件：</strong>軟體完全開源、資料可由成員自由匯出轉移，且完全不依賴特定單一科技巨頭的網域名稱、雲端機房或應用程式商店審查。</p>
+    </li>
+    <li>
+      <h3>用真實貢獻贏得而非靠金錢購買的信任</h3>
+      <p>社群聲譽是透過與眾多不同對象的真實交易逐步累積而來。若是成天只與自己的少數好友來回刷假單，累積到一定額度後系統便會停止採計，徹底封死灌水洗聲譽的漏洞。</p>
+      <p class="needs"><strong>落實所需條件：</strong>設定演算法上限，限制任何單一交易對象能為你累積的聲譽上限，並具備辨識互相掩護之幽靈帳號集團的機制。</p>
+    </li>
+    <li>
+      <h3>誰任命了誰，全部留下公開履歷</h3>
+      <p>每位成員當初由誰引薦加入、目前擔任哪項職位，以及當初是由誰授予權限，系統皆詳細留存紀錄。任人唯親的私相授受必然會留下清楚的數位足跡。</p>
+      <p class="needs"><strong>落實所需條件：</strong>任何職務異動對全體成員完全透明公開，並在社群內部建立起願意主動關心查核的公民文化。</p>
+    </li>
+    <li>
+      <h3>個人享有隱私保護，權力必須透明攤開</h3>
+      <p>一般成員的日常買賣與通訊對話應當嚴格保密。掌控共有公眾資產掌權者的決策與花費，則必須毫不隱瞞對大眾公開。當這兩者的順序被顛倒時，貪腐專制便會蔓延滋生。</p>
+      <p class="needs"><strong>落使所需條件：</strong>極為細緻的隱私架構設計，未來更可導入零知識證明等保護隱私的密碼學技術，在不洩漏任何個人財務細節的前提下，數學證明全體總帳完全平準無誤。</p>
+    </li>
+    <li>
+      <h3>小巧自主的社群單元，緊密相連</h3>
+      <p>貪腐往往隨著與受影響群眾之間的人際距離拉大而滋生。規模小到彼此互相認識、並以平等地位與其他社群串聯的社區網絡，比起龐大笨重的單一巨型中央體系，更難遭到特定利益集團全面掌控俘虜。</p>
+      <p class="needs"><strong>落實所需條件：</strong>任何社區都能在平價硬體上自主運作的輕量軟體，以及供各社區之間輕鬆相互串聯、暢通交易的共通標準通訊協定。</p>
+    </li>
+  </ol>
+</section>
+
+</div>
+
+<section id="blockchain" class="band">
+  <div class="wrap">
+    <h2>那麼，區塊鏈在其中扮演什麼角色？</h2>
+    <p>區塊鏈是打造無法被暗中竄改之數位帳本的一種方式：由成千上萬個分散節點相互核驗。它成功證明了一套系統即使沒有中央記帳官也能順暢運作。這確實是一項重大突破。</p>
+    <p>但區塊鏈絕非唯一的解法，而且它伴隨著沉重包袱：</p>
+    <ul>
+      <li>某些最知名的區塊鏈（尤其是比特幣）消耗了難以想像的龐大能源，而且絕大多數區塊鏈都離不開代幣。而代幣不可避免會引來投機炒作客。</li>
+      <li>「垃圾進，垃圾出」：分散式帳本固然能阻止歷史資料在事後被惡意竄改，但它完全無法防範虛偽造假的資料在一開始就被輸入登記。</li>
+      <li>永遠無法抹除的永久紀錄失去了「被遺忘的權利」，這在個人資料隱私保護與錯誤更正上帶來了棘手挑戰。</li>
+    </ul>
+    <p>我們真正該追求的是核心目標：<strong>一份無法被黑箱竄改、且人人都能自行檢驗的誠信紀錄</strong>。數位簽章紀錄、串聯雜湊指紋以及由不同方獨立持有的資料副本，在完全不需要任何投機代幣的情況下，就能百分之百達成這個目標。你瀏覽器網址列上的安全鎖頭圖示，正是仰賴完全不涉及區塊鏈的「憑證透明度」（Certificate Transparency）公開紀錄在運作。</p>
+    <p>技術互助主義的在地社區應當依據自身需求選擇最合適的工具，並坦誠面對各種技術選擇的權衡取捨。絕不搞任何供人炒作賺熱錢的虛擬代幣。</p>
+  </div>
+</section>
+
+<div class="wrap">
+
+<section id="edges" class="section">
+  <h2 class="riso">貪腐會轉移到哪些邊緣角落</h2>
+  <p>在這裡我們必須坦白面對現實。當你將數位帳本鎖得滴水不漏時，貪腐並不會瞬間人間蒸發；它會轉移到系統的邊緣，轉移到仍由人類主觀心智決策的灰色地帶：</p>
+  <ul>
+    <li><strong>誰能獲得加入許可。</strong>負責審核新成員的人可能會偷偷放行假帳號，或故意將異議競爭對手排拒在門外。</li>
+    <li><strong>誰的聲音能夠被聽見。</strong>討論看板的版主管理員可能會惡意將批評聲浪消音噤聲。</li>
+    <li><strong>誰保管關鍵金鑰並運作伺服器。</strong>他們能看見比一般人更多的系統資訊，甚至有能力中斷服務。</li>
+    <li><strong>誰掌控著應用程式商店與法律法規。</strong>外部強權隨時可以用一道行政命令強制關閉一項計畫。</li>
+  </ul>
+  <p>因此，軟體科技只是一半的答案。另一半關鍵，在於同樣必須全面攤在陽光下的開放治理制度：</p>
+  <div class="callout">
+    <p><strong>一個值得信賴的健全社區還必須具備：</strong>公開發布的入會資格與言論審核準則、所有審核裁決的公共日誌紀錄、可由成員隨時罷免並定期輪替的管理角色、定期的透明度公開報告、獨立公正的第三方稽核，以及多種可供安裝與運作軟體的替代途徑，確保沒有任何單一守門人能掐死整個系統。</p>
+  </div>
+  <p>這絕非這項理念的脆弱弱點；這正是踏實經營社區的日常功課。科技幫我們清除了那些最容易掩人耳目的黑箱藏匿處，而其餘的人類社會運作，則仰賴大家持續保持警覺與關心。伊莉諾·歐斯壯（Elinor Ostrom）因深入證實了人類在地社區只要能自主制定遊戲規則、落實公正互相監督並就地化解摩擦紛爭，就能歷經數百年卓越管理共有自然資源，而榮獲2009年諾貝爾經濟學獎。技術互助主義正是為這些努力自治的社區，打造更堅實強大的數位神兵利器。</p>
+</section>
+
+<nav class="next" aria-label="繼續閱讀">
+  <p>下一篇：<a href="/zh-Hant/in-practice">看看目前已在哪些地方運作 →</a></p>
+</nav>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap-wide">
+    <p><strong>technomutualism.org</strong> · 創立於2026年10月，由 <a href="https://beanpool.org">The BeanPool Project</a> 團隊發起。任何人皆可自由使用這個詞彙。</p>
+    <p class="small">文字內容採用 <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> 授權條款：歡迎自由複製、翻譯與改善。原始碼託管於 <a href="https://github.com/technomutualism/technomutualism.org">GitHub</a>。本網站不設定 Cookie，亦不載入任何第三方外部資源。</p>
+  </div>
+</footer>
+</body>
+</html>
