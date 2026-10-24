@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>白日のもとの権力 — テクノミューチュアリズム</title>
+<meta name="description" content="腐敗は共有物に対する隠された権力を必要とします。署名された記録、開かれたルール、分割された鍵、そして離脱の自由が隠れ場所を奪います。それぞれに必要な条件と、ブロックチェーンの位置づけ。">
+<link rel="canonical" href="https://technomutualism.org/ja/corruption">
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://technomutualism.org/corruption">
+<link rel="alternate" hreflang="es" href="https://technomutualism.org/es/corruption">
+<link rel="alternate" hreflang="zh-Hans" href="https://technomutualism.org/zh-Hans/corruption">
+<link rel="alternate" hreflang="zh-Hant" href="https://technomutualism.org/zh-Hant/corruption">
+<link rel="alternate" hreflang="ja" href="https://technomutualism.org/ja/corruption">
+<link rel="alternate" hreflang="x-default" href="https://technomutualism.org/corruption">
+<!-- /i18n:alternates -->
+<meta property="og:title" content="腐敗を排除する設計">
+<meta property="og:description" content="テクノロジーが腐敗と支配の隠れ場所を奪う12の方法と、それぞれに実際に必要な条件。">
+<meta property="og:url" content="https://technomutualism.org/ja/corruption">
+<meta property="og:image" content="https://technomutualism.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d4ddc6">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<header class="site-head">
+  <div class="wrap-wide">
+    <a class="brand" href="/ja/" aria-label="テクノミューチュアリズム、ホーム">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="25" cy="32" r="15" fill="#ff7a5c"/><circle cx="39" cy="32" r="15" fill="none" stroke="#14372a" stroke-width="6"/></svg>
+      テクノミューチュアリズム
+    </a>
+    <nav class="site-nav" aria-label="主要ナビゲーション">
+      <ul>
+        <li><a href="/ja/">理念</a></li>
+        <li><a href="/ja/history">歴史</a></li>
+        <li><a href="/ja/corruption" aria-current="page">白日のもとの権力</a></li>
+        <li><a href="/ja/in-practice">実践</a></li>
+        <li><a href="/ja/questions">よくある質問</a></li>
+      </ul>
+    </nav>
+    <!-- i18n:picker -->
+    <details class="lang-picker">
+      <summary><svg class="lang-globe" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> 日本語</summary>
+      <ul>
+      <li><a href="/corruption?lang=en" hreflang="en" lang="en">English</a></li>
+      <li><a href="/es/corruption?lang=es" hreflang="es" lang="es">Español</a></li>
+      <li><a href="/pt/corruption?lang=pt" hreflang="pt" lang="pt">Português</a></li>
+      <li><a href="/hi/corruption?lang=hi" hreflang="hi" lang="hi">हिन्दी</a></li>
+      <li><a href="/bn/corruption?lang=bn" hreflang="bn" lang="bn">বাংলা</a></li>
+      <li><a href="/fr/corruption?lang=fr" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/ar/corruption?lang=ar" hreflang="ar" lang="ar">العربية</a></li>
+      <li><a href="/id/corruption?lang=id" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+      <li><a href="/ru/corruption?lang=ru" hreflang="ru" lang="ru">Русский</a></li>
+      <li><a href="/zh-Hans/corruption?lang=zh-Hans" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+      <li><a href="/zh-Hant/corruption?lang=zh-Hant" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li>
+      <li><a href="/it/corruption?lang=it" hreflang="it" lang="it">Italiano</a></li>
+      <li><a href="/de/corruption?lang=de" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/tr/corruption?lang=tr" hreflang="tr" lang="tr">Türkçe</a></li>
+      <li><a href="/sw/corruption?lang=sw" hreflang="sw" lang="sw">Kiswahili</a></li>
+      <li><a href="/ml/corruption?lang=ml" hreflang="ml" lang="ml">മലയാളം</a></li>
+      <li><a href="/ta/corruption?lang=ta" hreflang="ta" lang="ta">தமிழ்</a></li>
+      <li><a href="/uk/corruption?lang=uk" hreflang="uk" lang="uk">Українська</a></li>
+      <li><a href="/ur/corruption?lang=ur" hreflang="ur" lang="ur">اردو</a></li>
+      <li><a href="/fa/corruption?lang=fa" hreflang="fa" lang="fa">فارسی</a></li>
+      <li><a href="/vi/corruption?lang=vi" hreflang="vi" lang="vi">Tiếng Việt</a></li>
+      <li><a href="/el/corruption?lang=el" hreflang="el" lang="el">Ελληνικά</a></li>
+      <li><a href="/fil/corruption?lang=fil" hreflang="fil" lang="fil">Filipino</a></li>
+      <li><a href="/ja/corruption?lang=ja" hreflang="ja" lang="ja" aria-current="true">日本語</a></li>
+      <li><a href="/ko/corruption?lang=ko" hreflang="ko" lang="ko">한국어</a></li>
+      </ul>
+    </details>
+    <!-- /i18n:picker -->
+  </div>
+</header>
+
+<main id="main">
+<!-- i18n:mt-note -->
+<aside class="mt-note" aria-label="Nota de traducción">
+  <div class="wrap">
+    <p>このページは機械翻訳されており、誤りが含まれている可能性があります。英語版が原文です。<a href="https://github.com/technomutualism/technomutualism.org">GitHub でこの翻訳の改善にご協力ください</a>。</p>
+  </div>
+</aside>
+<!-- /i18n:mt-note -->
+<div class="wrap">
+
+<section class="hero hero-page">
+  <p class="kicker">白日のもとの権力</p>
+  <h1 class="riso">隠れ場所をなくす</h1>
+  <p class="lede">腐敗、監視、そして支配は、すべて同じものを必要とします。誰も見ることができず、誰も止めることのできない、共有物に対する権力です。要塞の未来はそのような権力の上に築かれています。テクノロジーは人々を善人に変えることはできませんが、共有物に対する秘密の権力をまかり通らせることを極めて難しくすることはできます。</p>
+</section>
+
+<section class="section">
+  <p>腐敗が実際にどのように起きるかを考えてみてください。役人が土地の登記記録を改ざんする。会計係が口座間で資金を移動させる。銀行が身内に融資枠を作る。プラットフォームが自社製品を優遇するために密かにルールを変更する。投票箱が紛失する。そのすべてが、<strong>他の誰も検証できない記録を誰かが管理していること</strong>に依存しています。</p>
+  <p>テクノミューチュアリズムはそこに直接立ち向かいます。ここでは12の方法と、それぞれが実際に機能するために何が必要かを示します。</p>
+
+  <ol class="fixes">
+    <li>
+      <h3>支払者自身によるすべての支払いの署名</h3>
+      <p>各メンバーは自分のスマートフォン上に秘密鍵を持ち、多くの場合、単語のリスト（リカバリーフレーズ）としてバックアップされます。支払いは、その鍵で署名されている場合にのみ有効となります。あなたの鍵がなければ、サーバーの所有者も、管理者も、ハッカーも、あなたの資金を勝手に使うことはできません。</p>
+      <p class="needs"><strong>必要な条件：</strong>メンバーが自分の鍵を安全に管理すること、そして鍵を他人に渡すことなく回復できるシンプルな方法があること。</p>
+    </li>
+    <li>
+      <h3>内部関係者が刷り増しできないお金</h3>
+      <p>相互信用においては、あるメンバーが別のメンバーに支払うときにのみお金が生まれます。一方の残高が増え、もう一方の残高が同額だけ減ります。すべての残高の合計は常にゼロになります。中央銀行も、会計係も、「管理職の友人」も、無からお金を作り出すことはできません。</p>
+      <p class="needs"><strong>必要な条件：</strong>誰かの個人的な裁量ではなく、メンバーの取引実績など、公開されたルールに基づいて信用限度額が設定されること。</p>
+    </li>
+    <li>
+      <h3>オープンコードとしてのルール</h3>
+      <p>手数料、限度額、投票の仕組みは、誰もが読めるオープンソースソフトウェアで書かれています。「ルール」は、責任者がその週の気分で口にするようなものではなくなります。</p>
+      <p class="needs"><strong>必要な条件：</strong>コードが公開され、すべての変更が公に記録され、プログラマーでなくても理解できるよう平易な言葉で説明されていること。</p>
+    </li>
+    <li>
+      <h3>改ざんの痕跡が露見する台帳</h3>
+      <p>各記録には、それ以前の記録のデジタル指紋（「ハッシュ」）を持たせることができるため、古い記録を変更するとそれ以降のすべての指紋が破損します。異なる人々が保持する独立したコピーを照合すれば、1つのコピーが改ざんされたかどうかがすぐにわかります。</p>
+      <p class="needs"><strong>必要な条件：</strong>互いに上下関係のない人々によってコピーが保持され、誰かが実際にそれらを照合・検証すること。</p>
+    </li>
+    <li>
+      <h3>自動的に実行される集団の決定</h3>
+      <p>共有基金からの支出をメンバーが投票で決定すると、ソフトウェアが投票通りに正確に支払いを行います。誰も「忘れた」り、遅らせたり、親戚に流用したりすることはできません。</p>
+      <p class="needs"><strong>必要な条件：</strong>事前に合意された公正な投票ルール（誰が投票できるか、どれだけの参加が必要か）と、偽アカウントへの対策。</p>
+    </li>
+    <li>
+      <h3>白日のもとに置かれる共同資金</h3>
+      <p>各取引へのわずかな手数料や、死蔵された信用への緩やかな減価（保有コスト）などのコミュニティ資金は、メンバーがすべての支払いを確認できる共通のポット（基金）に流れ込みます。</p>
+      <p class="needs"><strong>必要な条件：</strong>共有されているもの（コミュニティのお金）と私的なもの（各メンバーの個別取引）との間の明確な境界線。</p>
+    </li>
+    <li>
+      <h3>単一の人物が鍵を独占しない仕組み</h3>
+      <p>アカウントの回復権限など、最も強力な鍵は分割されており、異なる場所にいる3人の鍵保持者のうち2人が合意する必要があります。リスクの高い操作は1日待機し、メンバーに通知されるため、不正な操作を阻止できます。</p>
+      <p class="needs"><strong>必要な条件：</strong>互いに独立した鍵保持者であること、そして鍵保持者に何ができて何ができないかについてメンバーに対して誠実であること。</p>
+    </li>
+    <li>
+      <h3>離脱の自由</h3>
+      <p>コミュニティのサーバーを運用している人々が権力を乱用した場合、メンバーはソフトウェアのコピーと自分たちの記録を持って、別の場所でやり直すことができます。背を向けて立ち去ることができる権力は、自ずと身を正さざるを得ません。</p>
+      <p class="needs"><strong>必要な条件：</strong>オープンソースソフトウェアであること、メンバーが書き出せる記録であること、そして特定の企業のドメイン、クラウド、アプリストアに依存しないこと。</p>
+    </li>
+    <li>
+      <h3>購入するのではなく、積み重ねて得る信頼</h3>
+      <p>評判は、多くの異なる人々との実際の取引から育まれます。自分の仲間内だけで堂々巡りの取引を繰り返しても一定限度でカウントされなくなるため、信頼を不正に水増しすることはできません。</p>
+      <p class="needs"><strong>必要な条件：</strong>単一の取引相手があなたの実績に加算できる量に制限を設けること、および偽アカウントのグループを検知する方法。</p>
+    </li>
+    <li>
+      <h3>誰が誰を任命したかの公の記録</h3>
+      <p>誰が各メンバーを招待したか、誰がどの役割を担い、誰がそれを付与したかがすべて記録されます。縁故や身内びいきは必ず痕跡を残します。</p>
+      <p class="needs"><strong>必要な条件：</strong>役割の変更がメンバーに見えるようになっていること、そして実際にそれを気にかけて確認する文化があること。</p>
+    </li>
+    <li>
+      <h3>市民にはプライバシーを、権力には透明性を</h3>
+      <p>一般メンバーの取引はプライベートであるべきです。共有物に対して権力を持つ者の決定と支出は公にされるべきです。これが逆転したときに腐敗がはびこります。</p>
+      <p class="needs"><strong>必要な条件：</strong>綿密な設計、そして将来的には個人の財務状況を明かすことなく合計額が一致することを証明するプライバシー保護の数学的技術。</p>
+    </li>
+    <li>
+      <h3>小さな単位が、対等につながる</h3>
+      <p>腐敗は、影響を受ける人々からの距離が遠くなるほど大きくなります。人々がお互いを知り合える小さなコミュニティが、対等な関係で他のコミュニティと連携している構造は、単一の巨大システムよりもはるかに乗っ取りが困難です。</p>
+      <p class="needs"><strong>必要な条件：</strong>あらゆるコミュニティが自ら運用できるソフトウェアと、コミュニティ同士がつながり取引するためのシンプルな方法。</p>
+    </li>
+  </ol>
+</section>
+
+</div>
+
+<section id="blockchain" class="band">
+  <div class="wrap">
+    <h2>ブロックチェーンについてはどうでしょうか？</h2>
+    <p>ブロックチェーンは、何千ものコピーが互いに照合し合うことで、誰も密かに書き換えることができない台帳を構築する方法の1つです。中央の帳簿係がいなくてもシステムが機能することを証明しました。これは重要な成果です。</p>
+    <p>しかし、ブロックチェーンは唯一の方法ではなく、重い負担を伴います。</p>
+    <ul>
+      <li>ビットコインをはじめとする最もよく知られたブロックチェーンの一部は大量のエネルギーを消費し、その大半がコインを必要とします。コインは投機家を引き寄せます。</li>
+      <li>「ゴミを入れればゴミが出る」：台帳は後から記録が改ざんされるのを防ぐことはできますが、そもそも虚偽の記録が入力されるのを防ぐことはできません。</li>
+      <li>消せない永久記録は「忘れられる権利」を持たず、個人データや過ちの訂正において深刻な問題となります。</li>
+    </ul>
+    <p>肝心なのは目標です。<strong>密かに変更されることがなく、人々が自分自身で検証できる記録であること</strong>です。署名された記録、連鎖するデジタル指紋、そして独立して保持されるコピーがあれば、投機的なコインを伴わずにそれを実現できます。あなたのブラウザの鍵マークは、ブロックチェーンを一切使わずにこのように機能する公開の「証明書透明性（Certificate Transparency）」ログにすでに依存しています。</p>
+    <p>テクノミューチュアリストのコミュニティは、どちらのツールが適しているかを選択し、そのトレードオフに誠実であるべきです。投機のためのトークンは不要です。</p>
+  </div>
+</section>
+
+<div class="wrap">
+
+<section id="edges" class="section">
+  <h2 class="riso">腐敗はどこへ移動するのか</h2>
+  <p>ここで率直な事実をお話しします。台帳を厳格にロックしても、腐敗が消滅するわけではありません。腐敗はシステムの周縁、つまり今なお人間が判断を下す領域へと移動するのです。</p>
+  <ul>
+    <li><strong>誰が参加を認められるか。</strong>新メンバーを承認する人物が、偽アカウントを招き入れたり、ライバルを締め出したりすることができます。</li>
+    <li><strong>誰の声が届くか。</strong>モデレーター（管理者）が批判者を沈黙させることができます。</li>
+    <li><strong>誰が鍵を握り、サーバーを運営しているか。</strong>彼らは他の人よりも多くのものを見ることができ、機能を止めることができます。</li>
+    <li><strong>誰がアプリストアと法律を握っているか。</strong>外部の公権力は依然としてプロジェクトを閉鎖することができます。</li>
+  </ul>
+  <p>したがって、テクノロジーは答えの半分にすぎません。もう半分は、同じように開かれた統治（ガバナンス）です。</p>
+  <div class="callout">
+    <p><strong>信頼できるコミュニティがさらに必要とするもの：</strong>加入とモデレーションに関する公開されたルール、モデレーション決定の公開ログ、交代制でメンバーによって解任可能な役職、定期的な透明性レポート、独立した監査、そして単一の門番が遮断できないようにするための複数のソフトウェア導入・実行方法。</p>
+  </div>
+  <p>これは理念の弱点ではなく、日々の不断の取り組みです。テクノロジーは安易な隠れ場所を取り去りますが、残りの部分は人々が見守り続けなければなりません。エリノア・オストロム（Elinor Ostrom）は、コミュニティが自らルールを作り、公正に互いを見守り、地域で紛争を解決するとき、何世紀にもわたって共有資源を良好に管理できることを証明し、2009年にノーベル経済学賞を受賞しました。テクノミューチュアリズムは、そうしたコミュニティにより優れた道具を提供するのです。</p>
+</section>
+
+<nav class="next" aria-label="続きを読む">
+  <p>次へ：<a href="/ja/in-practice">すでに実践されている現場 →</a></p>
+</nav>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap-wide">
+    <p><strong>technomutualism.org</strong> · 2026年10月に <a href="https://beanpool.org">The BeanPool Project</a> のチームによって立ち上げられました。この言葉は誰でも自由に使えます。</p>
+    <p class="small">テキストは <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> のもとでライセンスされています。複製、翻訳、改善が可能です。ソースコードは <a href="https://github.com/technomutualism/technomutualism.org">GitHub</a> にあります。本サイトはCookieを設定せず、他社からのリソース読み込みも行いません。</p>
+  </div>
+</footer>
+</body>
+</html>
