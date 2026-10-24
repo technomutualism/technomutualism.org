@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El poder a la vista — Tecnomutualismo</title>
+<meta name="description" content="La corrupción necesita poder oculto sobre lo compartido. Registros firmados, reglas abiertas, claves compartidas y la libertad de marcharse eliminan los escondites. Lo que necesita cada uno y el lugar de la cadena de bloques.">
+<link rel="canonical" href="https://technomutualism.org/es/corruption">
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://technomutualism.org/corruption">
+<link rel="alternate" hreflang="es" href="https://technomutualism.org/es/corruption">
+<link rel="alternate" hreflang="x-default" href="https://technomutualism.org/corruption">
+<!-- /i18n:alternates -->
+<meta property="og:title" content="Diseñar contra la corrupción">
+<meta property="og:description" content="Doce formas en que la tecnología puede eliminar los escondites de la corrupción y el control, y lo que necesita cada una.">
+<meta property="og:url" content="https://technomutualism.org/es/corruption">
+<meta property="og:image" content="https://technomutualism.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d4ddc6">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="site-head">
+  <div class="wrap-wide">
+    <a class="brand" href="/es/" aria-label="Tecnomutualismo, inicio">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="25" cy="32" r="15" fill="#ff7a5c"/><circle cx="39" cy="32" r="15" fill="none" stroke="#14372a" stroke-width="6"/></svg>
+      Tecnomutualismo
+    </a>
+    <nav class="site-nav" aria-label="Principal">
+      <ul>
+        <li><a href="/es/">La idea</a></li>
+        <li><a href="/es/history">Historia</a></li>
+        <li><a href="/es/corruption" aria-current="page">El poder a la vista</a></li>
+        <li><a href="/es/in-practice">En la práctica</a></li>
+        <li><a href="/es/questions">Preguntas</a></li>
+      </ul>
+    </nav>
+    <!-- i18n:picker -->
+    <details class="lang-picker">
+      <summary><svg class="lang-globe" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Español</summary>
+      <ul>
+      <li><a href="/corruption?lang=en" hreflang="en" lang="en">English</a></li>
+      <li><a href="/es/corruption?lang=es" hreflang="es" lang="es" aria-current="true">Español</a></li>
+      <li><a href="/pt/corruption?lang=pt" hreflang="pt" lang="pt">Português</a></li>
+      <li><a href="/hi/corruption?lang=hi" hreflang="hi" lang="hi">हिन्दी</a></li>
+      <li><a href="/bn/corruption?lang=bn" hreflang="bn" lang="bn">বাংলা</a></li>
+      <li><a href="/fr/corruption?lang=fr" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/ar/corruption?lang=ar" hreflang="ar" lang="ar">العربية</a></li>
+      <li><a href="/id/corruption?lang=id" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+      <li><a href="/ru/corruption?lang=ru" hreflang="ru" lang="ru">Русский</a></li>
+      <li><a href="/zh-Hans/corruption?lang=zh-Hans" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+      <li><a href="/zh-Hant/corruption?lang=zh-Hant" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li>
+      <li><a href="/it/corruption?lang=it" hreflang="it" lang="it">Italiano</a></li>
+      <li><a href="/de/corruption?lang=de" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/tr/corruption?lang=tr" hreflang="tr" lang="tr">Türkçe</a></li>
+      <li><a href="/sw/corruption?lang=sw" hreflang="sw" lang="sw">Kiswahili</a></li>
+      <li><a href="/ml/corruption?lang=ml" hreflang="ml" lang="ml">മലയാളം</a></li>
+      <li><a href="/ta/corruption?lang=ta" hreflang="ta" lang="ta">தமிழ்</a></li>
+      <li><a href="/uk/corruption?lang=uk" hreflang="uk" lang="uk">Українська</a></li>
+      <li><a href="/ur/corruption?lang=ur" hreflang="ur" lang="ur">اردو</a></li>
+      <li><a href="/fa/corruption?lang=fa" hreflang="fa" lang="fa">فارسی</a></li>
+      <li><a href="/vi/corruption?lang=vi" hreflang="vi" lang="vi">Tiếng Việt</a></li>
+      <li><a href="/el/corruption?lang=el" hreflang="el" lang="el">Ελληνικά</a></li>
+      <li><a href="/fil/corruption?lang=fil" hreflang="fil" lang="fil">Filipino</a></li>
+      <li><a href="/ja/corruption?lang=ja" hreflang="ja" lang="ja">日本語</a></li>
+      <li><a href="/ko/corruption?lang=ko" hreflang="ko" lang="ko">한국어</a></li>
+      </ul>
+    </details>
+    <!-- /i18n:picker -->
+  </div>
+</header>
+
+<main id="main">
+<!-- i18n:mt-note -->
+<aside class="mt-note" aria-label="Nota de traducción">
+  <div class="wrap">
+    <p>Esta página fue traducida por máquina y puede contener errores. La página en inglés es la original. <a href="https://github.com/technomutualism/technomutualism.org">Ayuda a mejorar esta traducción en GitHub</a>.</p>
+  </div>
+</aside>
+<!-- /i18n:mt-note -->
+<div class="wrap">
+
+<section class="hero hero-page">
+  <p class="kicker">El poder a la vista</p>
+  <h1 class="riso">Eliminar los escondites</h1>
+  <p class="lede">La corrupción, la vigilancia y el control necesitan lo mismo: poder sobre algo compartido que nadie más puede ver
+    ni detener. El futuro de la fortaleza se construye sobre esa clase de poder. La tecnología no puede hacer que las personas sean buenas,
+    pero puede hacer que sea muy difícil salirse con la suya teniendo poder secreto sobre cosas compartidas.</p>
+</section>
+
+<section class="section">
+  <p>Piensa en cómo ocurre realmente la corrupción. Un funcionario altera un registro de tierras. Un tesorero mueve dinero entre
+    cuentas. Un banco crea crédito para sus amigos. Una plataforma cambia silenciosamente sus reglas para favorecer sus propios productos.
+    Desaparece una urna electoral. Cada una depende de que <strong>alguien controle un registro que los demás no pueden verificar</strong>.</p>
+  <p>El tecnomutualismo ataca eso de frente. Aquí hay doce formas, y para cada una, lo que realmente se necesita para hacerla funcionar.</p>
+
+  <ol class="fixes">
+    <li>
+      <h3>Cada pago firmado por quien paga</h3>
+      <p>Cada miembro guarda una clave secreta en su propio teléfono, a menudo respaldada como una lista de palabras. Un pago solo cuenta si está
+        firmado con esa clave. Sin tu clave, ni el dueño del servidor, ni un administrador, ni un atacante informático pueden gastar tu dinero por ti.</p>
+      <p class="needs"><strong>Lo que necesita:</strong> miembros que mantengan seguras sus propias claves, y una forma sencilla de recuperarlas que no entregue la clave a nadie más.</p>
+    </li>
+    <li>
+      <h3>Dinero que los de adentro no pueden imprimir</h3>
+      <p>En el crédito mutuo, el dinero se crea solo cuando un miembro le paga a otro: un saldo sube y el otro baja en
+        la misma cantidad. Todos los saldos siempre suman cero. Ningún banco central, tesorero o "amigo del gerente" puede hacer
+        dinero de la nada.</p>
+      <p class="needs"><strong>Lo que necesita:</strong> límites de crédito establecidos por reglas públicas, como el historial de intercambios de un miembro, no por la aprobación personal de nadie.</p>
+    </li>
+    <li>
+      <h3>Reglas como código abierto</h3>
+      <p>La forma en que funcionan las comisiones, los límites y las votaciones está escrita en software de código abierto que cualquiera puede leer. "Las reglas" dejan de ser
+        lo que la persona a cargo decida que son esta semana.</p>
+      <p class="needs"><strong>Lo que necesita:</strong> el código publicado, cada cambio registrado en público y explicaciones en lenguaje sencillo para que quienes no programan puedan seguirlo.</p>
+    </li>
+    <li>
+      <h3>Un libro contable que muestra las alteraciones</h3>
+      <p>Cada registro puede llevar una huella digital (un "hash") de los registros anteriores, de modo que modificar una entrada antigua rompe todas
+        las huellas posteriores. Copias independientes en manos de distintas personas muestran de inmediato si una copia fue alterada.</p>
+      <p class="needs"><strong>Lo que necesita:</strong> copias en manos de personas que no dependan unas de otras, y alguien que realmente las verifique.</p>
+    </li>
+    <li>
+      <h3>Decisiones que se ejecutan solas</h3>
+      <p>Cuando los miembros votan para gastar de un fondo compartido, el software realiza el pago exactamente como se votó. Nadie puede
+        "olvidar", retrasar o redirigirlo a un pariente.</p>
+      <p class="needs"><strong>Lo que necesita:</strong> reglas de votación justas (quién puede votar, cuántos deben participar) acordadas de antemano y protección contra cuentas falsas.</p>
+    </li>
+    <li>
+      <h3>Fondos compartidos a la vista de todos</h3>
+      <p>Los fondos comunitarios, como una pequeña comisión por cada venta o la pérdida gradual de valor del crédito acumulado, van a un fondo común cuyos
+        pagos pueden ver todos los miembros.</p>
+      <p class="needs"><strong>Lo que necesita:</strong> una línea clara entre lo compartido (el dinero de la comunidad) y lo privado (los intercambios propios de cada miembro).</p>
+    </li>
+    <li>
+      <h3>Ninguna persona individual tiene todas las claves</h3>
+      <p>Las claves más poderosas, como las que pueden restaurar cuentas, se dividen para que dos de tres custodios en
+        distintos lugares deban estar de acuerdo. Las acciones arriesgadas esperan un día y notifican al miembro, para que puedan detenerse a tiempo.</p>
+      <p class="needs"><strong>Lo que necesita:</strong> custodios que sean independientes entre sí y honestidad con los miembros sobre lo que los custodios pueden y no pueden hacer.</p>
+    </li>
+    <li>
+      <h3>Libertad de marcharse</h3>
+      <p>Si quienes operan el servidor de una comunidad abusan de él, los miembros pueden llevarse una copia del software y sus registros y
+        empezar de nuevo en otra parte. El poder del que uno puede alejarse está obligado a portarse bien.</p>
+      <p class="needs"><strong>Lo que necesita:</strong> software de código abierto, registros que los miembros puedan exportar y ninguna dependencia del dominio, la nube o la tienda de aplicaciones de una sola empresa.</p>
+    </li>
+    <li>
+      <h3>Confianza que se gana, no se compra</h3>
+      <p>La reputación surge de intercambios reales con muchas personas diferentes. Comerciar en círculos con tus propios amigos deja de
+        contar a partir de cierto punto, para que no se pueda inflar la confianza de forma artificial.</p>
+      <p class="needs"><strong>Lo que necesita:</strong> límites a cuánto puede aportar cualquier socio individual a tu registro y formas de detectar redes de cuentas falsas.</p>
+    </li>
+    <li>
+      <h3>Quién nombró a quién, en el registro</h3>
+      <p>Quién invitó a cada miembro, quién tiene qué rol y quién se lo otorgó queda registrado. El favoritismo deja rastro.</p>
+      <p class="needs"><strong>Lo que necesita:</strong> cambios de rol visibles para los miembros y una cultura de prestar atención de verdad.</p>
+    </li>
+    <li>
+      <h3>Privacidad para las personas, transparencia para el poder</h3>
+      <p>Los intercambios de los miembros comunes deben ser privados. Las decisiones y los gastos de quienes tienen poder sobre lo compartido
+        deben ser públicos. La corrupción prospera cuando esto se invierte.</p>
+      <p class="needs"><strong>Lo que necesita:</strong> diseño cuidadoso y, en el futuro, matemáticas que preserven la privacidad demostrando que los totales cuadran sin exponer las finanzas personales de nadie.</p>
+    </li>
+    <li>
+      <h3>Unidades pequeñas, conectadas entre sí</h3>
+      <p>La corrupción crece con la distancia hacia las personas afectadas. Comunidades lo bastante pequeñas como para que la gente se conozca,
+        conectadas con otras como iguales, son mucho más difíciles de cooptar que un sistema gigantesco.</p>
+      <p class="needs"><strong>Lo que necesita:</strong> software que cualquier comunidad pueda operar por sí misma y formas sencillas para que las comunidades se conecten y comercien.</p>
+    </li>
+  </ol>
+</section>
+
+</div>
+
+<section id="blockchain" class="band">
+  <div class="wrap">
+    <h2>¿Y la cadena de bloques (blockchain)?</h2>
+    <p>La cadena de bloques es una forma de construir un registro que nadie puede reescribir en secreto: miles de copias, cada una verificando a las
+      demás. Demostró que la idea funciona sin un contador central. Eso importa.</p>
+    <p>Pero la cadena de bloques no es la única manera, y viene con complicaciones:</p>
+    <ul>
+      <li>Algunas de las cadenas más conocidas, Bitcoin sobre todo, consumen enormes cantidades de energía, y la mayoría necesita una moneda. Las monedas atraen a especuladores.</li>
+      <li>"Entra basura, sale basura": un registro puede evitar que las entradas se modifiquen después, pero no puede evitar que se introduzca un registro falso en primer lugar.</li>
+      <li>Los registros permanentes no pueden olvidar, lo cual es un problema para los datos personales y para los errores.</li>
+    </ul>
+    <p>Lo que importa es el objetivo: <strong>un registro que no se pueda modificar en silencio y que la gente pueda comprobar por sí misma</strong>.
+      Entradas firmadas, huellas encadenadas y copias en manos independientes pueden lograrlo sin necesidad de una moneda. El candado de
+      tu navegador ya confía en registros públicos de "Transparencia de Certificados" que funcionan de esta manera, sin ninguna cadena de bloques de por medio.</p>
+    <p>Una comunidad tecnomutualista debe elegir la herramienta que mejor se adapte y ser honesta sobre sus ventajas y desventajas. Sin fichas o tokens para especular.</p>
+  </div>
+</section>
+
+<div class="wrap">
+
+<section id="edges" class="section">
+  <h2 class="riso">Hacia dónde se desplaza la corrupción</h2>
+  <p>Aquí está la parte honesta. Cuando aseguras el libro contable, la corrupción no desaparece; se traslada a los márgenes, a los
+    lugares donde los humanos todavía deciden:</p>
+  <ul>
+    <li><strong>Quién entra.</strong> Quien aprueba nuevos miembros puede dejar pasar cuentas falsas o dejar fuera a competidores.</li>
+    <li><strong>A quién se escucha.</strong> Los moderadores pueden silenciar a los críticos.</li>
+    <li><strong>Quién tiene las claves y maneja los servidores.</strong> Pueden ver más que los demás y apagar servicios.</li>
+    <li><strong>Quién controla las tiendas de aplicaciones y las leyes.</strong> Poderes externos aún pueden clausurar un proyecto.</li>
+  </ul>
+  <p>De modo que la tecnología es la mitad de la respuesta. La otra mitad es una gobernanza que sea igual de transparente:</p>
+  <div class="callout">
+    <p><strong>Lo que una comunidad confiable también necesita:</strong> reglas publicadas de admisión y moderación, un registro público
+      de las decisiones de moderación, roles rotativos revocables por los miembros, informes periódicos de transparencia, auditorías
+      independientes y más de una forma de instalar y ejecutar el software, para que ningún intermediario único pueda detenerlo.</p>
+  </div>
+  <p>Eso no es una debilidad de la idea; es el trabajo necesario. La tecnología elimina los escondites fáciles, y la gente tiene que seguir
+    vigilando el resto. Elinor Ostrom ganó el Premio Nobel de Economía en 2009 por demostrar que las comunidades pueden gestionar recursos
+    compartidos con éxito durante siglos cuando crean sus propias reglas, se vigilan mutuamente con justicia y resuelven disputas a nivel local.
+    El tecnomutualismo da a esas comunidades mejores herramientas.</p>
+</section>
+
+<nav class="next" aria-label="Seguir leyendo">
+  <p>Siguiente: <a href="/es/in-practice">Dónde ya está funcionando →</a></p>
+</nav>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap-wide">
+    <p><strong>technomutualism.org</strong> · iniciado en octubre de 2026 por el equipo detrás de
+      <a href="https://beanpool.org">The BeanPool Project</a>. La palabra es libre para que cualquiera la use.</p>
+    <p class="small">Texto bajo licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>: cópialo, tradúcelo, mejóralo.
+      Código fuente en <a href="https://github.com/technomutualism/technomutualism.org">GitHub</a>.
+      Este sitio no instala cookies y no carga nada de terceros.</p>
+  </div>
+</footer>
+</body>
+</html>
