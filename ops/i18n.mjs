@@ -138,7 +138,7 @@ function generateMtNoteBlock(currentCode) {
   }
   return [
     '<!-- i18n:mt-note -->',
-    '<aside class="mt-note" aria-label="Nota de traducción">',
+    `<aside class="mt-note" aria-label="${(languagesConfig.find((l) => l.code === currentCode) || {}).mtLabel || 'Translation note'}">`,
     '  <div class="wrap">',
     `    <p>${mtNoteConfig[currentCode]}</p>`,
     '  </div>',
