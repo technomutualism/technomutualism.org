@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="el" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Η εξουσία στο φως — Τεχνομουτουαλισμός</title>
+<meta name="description" content="Η διαφθορά χρειάζεται κρυφή εξουσία πάνω σε κοινά πράγματα. Υπογεγραμμένες εγγραφές, ανοιχτοί κανόνες, κοινόχρηστα κλειδιά και η ελευθερία αποχώρησης αφαιρούν τις κρυψώνες. Τι χρειάζεται το καθένα και πού ταιριάζει το blockchain.">
+<link rel="canonical" href="https://technomutualism.org/el/corruption">
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://technomutualism.org/corruption">
+<link rel="alternate" hreflang="es" href="https://technomutualism.org/es/corruption">
+<link rel="alternate" hreflang="pt" href="https://technomutualism.org/pt/corruption">
+<link rel="alternate" hreflang="hi" href="https://technomutualism.org/hi/corruption">
+<link rel="alternate" hreflang="bn" href="https://technomutualism.org/bn/corruption">
+<link rel="alternate" hreflang="fr" href="https://technomutualism.org/fr/corruption">
+<link rel="alternate" hreflang="ar" href="https://technomutualism.org/ar/corruption">
+<link rel="alternate" hreflang="id" href="https://technomutualism.org/id/corruption">
+<link rel="alternate" hreflang="ru" href="https://technomutualism.org/ru/corruption">
+<link rel="alternate" hreflang="zh-Hans" href="https://technomutualism.org/zh-Hans/corruption">
+<link rel="alternate" hreflang="zh-Hant" href="https://technomutualism.org/zh-Hant/corruption">
+<link rel="alternate" hreflang="it" href="https://technomutualism.org/it/corruption">
+<link rel="alternate" hreflang="de" href="https://technomutualism.org/de/corruption">
+<link rel="alternate" hreflang="tr" href="https://technomutualism.org/tr/corruption">
+<link rel="alternate" hreflang="sw" href="https://technomutualism.org/sw/corruption">
+<link rel="alternate" hreflang="ml" href="https://technomutualism.org/ml/corruption">
+<link rel="alternate" hreflang="ta" href="https://technomutualism.org/ta/corruption">
+<link rel="alternate" hreflang="uk" href="https://technomutualism.org/uk/corruption">
+<link rel="alternate" hreflang="ur" href="https://technomutualism.org/ur/corruption">
+<link rel="alternate" hreflang="fa" href="https://technomutualism.org/fa/corruption">
+<link rel="alternate" hreflang="vi" href="https://technomutualism.org/vi/corruption">
+<link rel="alternate" hreflang="el" href="https://technomutualism.org/el/corruption">
+<link rel="alternate" hreflang="fil" href="https://technomutualism.org/fil/corruption">
+<link rel="alternate" hreflang="ja" href="https://technomutualism.org/ja/corruption">
+<link rel="alternate" hreflang="ko" href="https://technomutualism.org/ko/corruption">
+<link rel="alternate" hreflang="x-default" href="https://technomutualism.org/corruption">
+<!-- /i18n:alternates -->
+<meta property="og:title" content="Σχεδιάζοντας έξω τη διαφθορά">
+<meta property="og:description" content="Δώδεκα τρόποι με τους οποίους η τεχνολογία μπορεί να αφαιρέσει τις κρυψώνες της διαφθοράς και του ελέγχου, και τι χρειάζεται ο καθένας.">
+<meta property="og:url" content="https://technomutualism.org/el/corruption">
+<meta property="og:image" content="https://technomutualism.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="el_GR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_419">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="hi_IN">
+<meta property="og:locale:alternate" content="bn_BD">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="id_ID">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="sw_KE">
+<meta property="og:locale:alternate" content="ml_IN">
+<meta property="og:locale:alternate" content="ta_IN">
+<meta property="og:locale:alternate" content="uk_UA">
+<meta property="og:locale:alternate" content="ur_PK">
+<meta property="og:locale:alternate" content="fa_IR">
+<meta property="og:locale:alternate" content="vi_VN">
+<meta property="og:locale:alternate" content="fil_PH">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d4ddc6">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Μετάβαση στο περιεχόμενο</a>
+
+<header class="site-head">
+  <div class="wrap-wide">
+    <a class="brand" href="/el/" aria-label="Τεχνομουτουαλισμός, αρχική">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="25" cy="32" r="15" fill="#ff7a5c"/><circle cx="39" cy="32" r="15" fill="none" stroke="#14372a" stroke-width="6"/></svg>
+      Τεχνομουτουαλισμός
+    </a>
+    <nav class="site-nav" aria-label="Κύρια">
+      <ul>
+        <li><a href="/el/">Η ιδέα</a></li>
+        <li><a href="/el/history">Ιστορία</a></li>
+        <li><a href="/el/corruption" aria-current="page">Η εξουσία στο φως</a></li>
+        <li><a href="/el/in-practice">Στην πράξη</a></li>
+        <li><a href="/el/questions">Ερωτήσεις</a></li>
+      </ul>
+    </nav>
+    <!-- i18n:picker -->
+    <details class="lang-picker">
+      <summary><svg class="lang-globe" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Ελληνικά</summary>
+      <ul>
+      <li><a href="/corruption?lang=en" hreflang="en" lang="en">English</a></li>
+      <li><a href="/es/corruption?lang=es" hreflang="es" lang="es">Español</a></li>
+      <li><a href="/pt/corruption?lang=pt" hreflang="pt" lang="pt">Português</a></li>
+      <li><a href="/hi/corruption?lang=hi" hreflang="hi" lang="hi">हिन्दी</a></li>
+      <li><a href="/bn/corruption?lang=bn" hreflang="bn" lang="bn">বাংলা</a></li>
+      <li><a href="/fr/corruption?lang=fr" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/ar/corruption?lang=ar" hreflang="ar" lang="ar">العربية</a></li>
+      <li><a href="/id/corruption?lang=id" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+      <li><a href="/ru/corruption?lang=ru" hreflang="ru" lang="ru">Русский</a></li>
+      <li><a href="/zh-Hans/corruption?lang=zh-Hans" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+      <li><a href="/zh-Hant/corruption?lang=zh-Hant" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li>
+      <li><a href="/it/corruption?lang=it" hreflang="it" lang="it">Italiano</a></li>
+      <li><a href="/de/corruption?lang=de" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/tr/corruption?lang=tr" hreflang="tr" lang="tr">Türkçe</a></li>
+      <li><a href="/sw/corruption?lang=sw" hreflang="sw" lang="sw">Kiswahili</a></li>
+      <li><a href="/ml/corruption?lang=ml" hreflang="ml" lang="ml">മലയാളം</a></li>
+      <li><a href="/ta/corruption?lang=ta" hreflang="ta" lang="ta">தமிழ்</a></li>
+      <li><a href="/uk/corruption?lang=uk" hreflang="uk" lang="uk">Українська</a></li>
+      <li><a href="/ur/corruption?lang=ur" hreflang="ur" lang="ur">اردو</a></li>
+      <li><a href="/fa/corruption?lang=fa" hreflang="fa" lang="fa">فارسی</a></li>
+      <li><a href="/vi/corruption?lang=vi" hreflang="vi" lang="vi">Tiếng Việt</a></li>
+      <li><a href="/el/corruption?lang=el" hreflang="el" lang="el" aria-current="true">Ελληνικά</a></li>
+      <li><a href="/fil/corruption?lang=fil" hreflang="fil" lang="fil">Filipino</a></li>
+      <li><a href="/ja/corruption?lang=ja" hreflang="ja" lang="ja">日本語</a></li>
+      <li><a href="/ko/corruption?lang=ko" hreflang="ko" lang="ko">한국어</a></li>
+      </ul>
+    </details>
+    <!-- /i18n:picker -->
+  </div>
+</header>
+
+<main id="main">
+<!-- i18n:mt-note -->
+<aside class="mt-note" aria-label="Σημείωση μετάφρασης">
+  <div class="wrap">
+    <p>Αυτή η σελίδα μεταφράστηκε αυτόματα και ενδέχεται να περιέχει λάθη. Η αγγλική σελίδα είναι το πρωτότυπο. <a href="https://github.com/technomutualism/technomutualism.org">Βοηθήστε στη βελτίωση αυτής της μετάφρασης στο GitHub</a>.</p>
+  </div>
+</aside>
+<!-- /i18n:mt-note -->
+<div class="wrap">
+
+<section class="hero hero-page">
+  <p class="kicker">Η εξουσία στο φως</p>
+  <h1 class="riso">Αφαιρέστε τις κρυψώνες</h1>
+  <p class="lede">Η διαφθορά, η επιτήρηση και ο έλεγχος χρειάζονται όλα το ίδιο πράγμα: εξουσία πάνω σε κάτι κοινό που κανείς άλλος
+    δεν μπορεί να δει ή να σταματήσει. Το μέλλον-φρούριο είναι χτισμένο σε αυτού του είδους την εξουσία. Η τεχνολογία δεν μπορεί
+    να κάνει τους ανθρώπους καλούς, αλλά μπορεί να κάνει τη μυστική εξουσία πάνω σε κοινά πράγματα πολύ δύσκολο να περάσει ατιμώρητη.</p>
+</section>
+
+<section class="section">
+  <p>Σκεφτείτε πώς συμβαίνει στην πραγματικότητα η διαφθορά. Ένας αξιωματούχος τροποποιεί ένα κτηματολογικό αρχείο. Ένας ταμίας
+    μεταφέρει χρήματα μεταξύ λογαριασμών. Μια τράπεζα δημιουργεί πίστωση για τους φίλους της. Μια πλατφόρμα αλλάζει αθόρυβα
+    τους κανόνες της για να ευνοήσει τα δικά της προϊόντα. Μια κάλπη εξαφανίζεται. Κάθε περίπτωση εξαρτάται από <strong>κάποιον
+    που ελέγχει ένα αρχείο το οποίο οι άλλοι δεν μπορούν να ελέγξουν</strong>.</p>
+  <p>Ο τεχνομουτουαλισμός επιτίθεται απευθείας σε αυτό. Εδώ είναι δώδεκα τρόποι, και για τον καθένα, τι πραγματικά χρειάζεται
+    για να λειτουργήσει.</p>
+
+  <ol class="fixes">
+    <li>
+      <h3>Κάθε πληρωμή υπογεγραμμένη από τον πληρωτή</h3>
+      <p>Κάθε μέλος διατηρεί ένα μυστικό κλειδί στο δικό του τηλέφωνο, συχνά αποθηκευμένο ως μια λίστα λέξεων. Μια πληρωμή
+        μετράει μόνο εάν έχει υπογραφεί με αυτό το κλειδί. Χωρίς το κλειδί σας, ούτε ο ιδιοκτήτης του διακομιστή, ούτε ένας
+        διαχειριστής, ούτε ένας χάκερ δεν μπορεί να ξοδέψει τα χρήματά σας για εσάς.</p>
+      <p class="needs"><strong>Τι χρειάζεται:</strong> μέλη που διατηρούν τα δικά τους κλειδιά ασφαλή, και έναν απλό τρόπο ανάκτησής τους που δεν παραδίδει το κλειδί σε κάποιον άλλον.</p>
+    </li>
+    <li>
+      <h3>Χρήματα που δεν μπορούν να εκτυπωθούν από κάποιον εκ των έσω</h3>
+      <p>Στην αμοιβαία πίστωση, τα χρήματα δημιουργούνται μόνο όταν ένα μέλος πληρώνει ένα άλλο: το ένα υπόλοιπο αυξάνεται και
+        το άλλο μειώνεται κατά το ίδιο ποσό. Όλα τα υπόλοιπα αθροίζονται πάντα στο μηδέν. Καμία κεντρική τράπεζα, ταμίας ή
+        «φίλος του διευθυντή» δεν μπορεί να βγάλει χρήματα από το τίποτα.</p>
+      <p class="needs"><strong>Τι χρειάζεται:</strong> πιστωτικά όρια που ορίζονται από δημοσιευμένους κανόνες, όπως το ιστορικό συναλλαγών ενός μέλους, και όχι από την προσωπική έγκριση οποιουδήποτε.</p>
+    </li>
+    <li>
+      <h3>Κανόνες ως ανοιχτός κώδικας</h3>
+      <p>Ο τρόπος με τον οποίο λειτουργούν οι προμήθειες, τα όρια και οι ψηφοφορίες είναι γραμμένος σε λογισμικό ανοιχτού κώδικα
+        που ο καθένας μπορεί να διαβάσει. «Οι κανόνες» παύουν να είναι ό,τι αποφασίζει ο υπεύθυνος αυτή την εβδομάδα.</p>
+      <p class="needs"><strong>Τι χρειάζεται:</strong> ο κώδικας να είναι δημοσιευμένος, κάθε αλλαγή να καταγράφεται δημόσια, και σαφείς επεξηγήσεις σε απλή γλώσσα ώστε οι μη προγραμματιστές να μπορούν να παρακολουθούν.</p>
+    </li>
+    <li>
+      <h3>Ένα καθολικό που αποκαλύπτει την παραποίηση</h3>
+      <p>Κάθε εγγραφή μπορεί να φέρει ένα ψηφιακό αποτύπωμα (ένα "hash") των προηγούμενων εγγραφών, έτσι ώστε η αλλαγή μιας παλιάς
+        εγγραφής να σπάει κάθε επόμενο αποτύπωμα. Ανεξάρτητα αντίγραφα που τηρούνται από διαφορετικά άτομα δείχνουν αμέσως εάν
+        ένα αντίγραφο αλλοιώθηκε.</p>
+      <p class="needs"><strong>Τι χρειάζεται:</strong> αντίγραφα που τηρούνται από άτομα που δεν λογοδοτούν το ένα στο άλλο, και κάποιον που πραγματικά τα ελέγχει.</p>
+    </li>
+    <li>
+      <h3>Αποφάσεις που εκτελούνται μόνες τους</h3>
+      <p>Όταν τα μέλη ψηφίζουν για δαπάνες από ένα κοινό ταμείο, το λογισμικό πραγματοποιεί την πληρωμή ακριβώς όπως ψηφίστηκε.
+        Κανείς δεν έχει τη δυνατότητα να «ξεχάσει», να καθυστερήσει ή να ανακατευθύνει τα χρήματα σε έναν συγγενή.</p>
+      <p class="needs"><strong>Τι χρειάζεται:</strong> δίκαιοι κανόνες ψηφοφορίας (ποιος μπορεί να ψηφίσει, πόσοι πρέπει να συμμετάσχουν) συμφωνημένοι εκ των προτέρων, και προστασία από ψεύτικους λογαριασμούς.</p>
+    </li>
+    <li>
+      <h3>Κοινά ταμεία στο φως</h3>
+      <p>Τα κοινοτικά κεφάλαια, όπως ένα μικρό τέλος σε κάθε πώληση ή η αργή απομείωση της συσσωρευμένης πίστωσης, ρέουν σε
+        ένα κοινό ταμείο του οποίου κάθε πληρωμή μπορούν να δουν τα μέλη.</p>
+      <p class="needs"><strong>Τι χρειάζεται:</strong> μια σαφής γραμμή μεταξύ αυτού που είναι κοινό (τα χρήματα της κοινότητας) και αυτού που είναι ιδιωτικό (οι προσωπικές συναλλαγές κάθε μέλους).</p>
+    </li>
+    <li>
+      <h3>Κανένα μεμονωμένο άτομο δεν κατέχει όλα τα κλειδιά</h3>
+      <p>Τα πιο ισχυρά κλειδιά, όπως αυτά που μπορούν να επαναφέρουν λογαριασμούς, είναι χωρισμένα έτσι ώστε δύο στους τρεις
+        κατόχους κλειδιών σε διαφορετικά μέρη να πρέπει να συμφωνήσουν. Οι επικίνδυνες ενέργειες περιμένουν μία ημέρα και
+        ειδοποιούν το μέλος, ώστε να μπορούν να σταματήσουν.</p>
+      <p class="needs"><strong>Τι χρειάζεται:</strong> κάτοχοι κλειδιών που είναι ανεξάρτητοι μεταξύ τους, και ειλικρίνεια με τα μέλη σχετικά με το τι μπορούν και τι δεν μπορούν να κάνουν οι κάτοχοι κλειδιών.</p>
+    </li>
+    <li>
+      <h3>Ελευθερία αποχώρησης</h3>
+      <p>Εάν οι άνθρωποι που διαχειρίζονται τον διακομιστή μιας κοινότητας κάνουν κατάχρηση, τα μέλη μπορούν να πάρουν ένα αντίγραφο
+        του λογισμικού και των αρχείων τους και να ξεκινήσουν ξανά αλλού. Η εξουσία από την οποία μπορεί κανείς να απομακρυνθεί
+        αναγκάζεται να συμπεριφέρεται έντιμα.</p>
+      <p class="needs"><strong>Τι χρειάζεται:</strong> λογισμικό ανοιχτού κώδικα, εγγραφές που τα μέλη μπορούν να εξάγουν, και καμία εξάρτηση από το domain, το cloud ή το κατάστημα εφαρμογών μιας εταιρείας.</p>
+    </li>
+    <li>
+      <h3>Εμπιστοσύνη που κερδίζεται, δεν αγοράζεται</h3>
+      <p>Η φήμη χτίζεται μέσα από πραγματικές συναλλαγές με πολλούς διαφορετικούς ανθρώπους. Οι κυκλικές συναλλαγές με τους δικούς
+        σας φίλους σταματούν να μετρούν μετά από ένα σημείο, επομένως η εμπιστοσύνη δεν μπορεί να κατασκευαστεί τεχνητά.</p>
+      <p class="needs"><strong>Τι χρειάζεται:</strong> όρια στο πόσο μπορεί να προσθέσει οποιοσδήποτε μεμονωμένος συνεργάτης στο ιστορικό σας, και τρόποι εντοπισμού κυκλωμάτων ψεύτικων λογαριασμών.</p>
+    </li>
+    <li>
+      <h3>Ποιος διόρισε ποιον, καταγεγραμμένο στο αρχείο</h3>
+      <p>Ποιος προσκάλεσε κάθε μέλος, ποιος κατέχει ποιον ρόλο και ποιος τον παραχώρησε, όλα καταγράφονται. Η ευνοιοκρατία αφήνει ίχνη.</p>
+      <p class="needs"><strong>Τι χρειάζεται:</strong> αλλαγές ρόλων που είναι ορατές στα μέλη, και μια κουλτούρα ουσιαστικού ελέγχου.</p>
+    </li>
+    <li>
+      <h3>Ιδιωτικότητα για τους ανθρώπους, διαφάνεια για την εξουσία</h3>
+      <p>Οι συναλλαγές των απλών μελών πρέπει να είναι ιδιωτικές. Οι αποφάσεις και οι δαπάνες όσων έχουν εξουσία πάνω σε κοινά
+        πράγματα πρέπει να είναι δημόσιες. Η διαφθορά ευδοκιμεί όταν συμβαίνει το αντίστροφο.</p>
+      <p class="needs"><strong>Τι χρειάζεται:</strong> προσεκτικός σχεδιασμός, και στο μέλλον μαθηματικά διατήρησης της ιδιωτικότητας που αποδεικνύουν ότι τα σύνολα συμφωνούν χωρίς να εκθέτουν τα προσωπικά οικονομικά κανενός.</p>
+    </li>
+    <li>
+      <h3>Μικρές μονάδες, συνδεδεμένες μεταξύ τους</h3>
+      <p>Η διαφθορά μεγαλώνει με την απόσταση από τους επηρεαζόμενους ανθρώπους. Κοινότητες αρκετά μικρές ώστε οι άνθρωποι να
+        γνωρίζονται μεταξύ τους, συνδεδεμένες με άλλες ως ίσες, είναι πολύ πιο δύσκολο να αλωθούν από ό,τι ένα γιγάντιο σύστημα.</p>
+      <p class="needs"><strong>Τι χρειάζεται:</strong> λογισμικό που κάθε κοινότητα μπορεί να εκτελέσει μόνη της, και απλοί τρόποι σύνδεσης και συναλλαγών μεταξύ κοινοτήτων.</p>
+    </li>
+  </ol>
+</section>
+
+</div>
+
+<section id="blockchain" class="band">
+  <div class="wrap">
+    <h2>Τι γίνεται με το blockchain;</h2>
+    <p>Το blockchain είναι ένας τρόπος για να οικοδομηθεί ένα καθολικό που κανείς δεν μπορεί να ξαναγράψει κρυφά: χιλιάδες
+      αντίγραφα, καθένα από τα οποία ελέγχει τα άλλα. Απέδειξε ότι η ιδέα λειτουργεί χωρίς κεντρικό λογιστή. Αυτό έχει σημασία.</p>
+    <p>Όμως το blockchain δεν είναι ο μόνος τρόπος, και κουβαλάει βάρη:</p>
+    <ul>
+      <li>Μερικά από τα πιο γνωστά blockchain, πάνω απ' όλα το Bitcoin, καίνε τεράστιες ποσότητες ενέργειας, και τα περισσότερα χρειάζονται ένα νόμισμα (coin). Τα νομίσματα προσελκύουν κερδοσκόπους.</li>
+      <li>«Σκουπίδια μέσα, σκουπίδια έξω»: ένα καθολικό μπορεί να εμποδίσει την αλλαγή των εγγραφών αργότερα, αλλά δεν μπορεί να αποτρέψει την εισαγωγή μιας ψευδούς εγγραφής εξαρχής.</li>
+      <li>Οι μόνιμες εγγραφές δεν μπορούν να ξεχάσουν, πράγμα που αποτελεί πρόβλημα για τα προσωπικά δεδομένα και για τα λάθη.</li>
+    </ul>
+    <p>Ο στόχος είναι αυτό που μετράει: <strong>ένα αρχείο που δεν μπορεί να αλλαχθεί αθόρυβα και που οι άνθρωποι μπορούν να ελέγξουν
+      μόνοι τους</strong>. Οι υπογεγραμμένες καταχωρίσεις, τα αλυσιδωτά αποτυπώματα και τα ανεξάρτητα τηρούμενα αντίγραφα μπορούν
+      να το προσφέρουν αυτό χωρίς κανένα νόμισμα. Το λουκετάκι στο πρόγραμμα περιήγησής σας βασίζεται ήδη στα δημόσια αρχεία
+      καταγραφής «Certificate Transparency» που λειτουργούν με αυτόν τον τρόπο, χωρίς να εμπλέκεται κανένα blockchain.</p>
+    <p>Μια τεχνομουτουαλιστική κοινότητα θα πρέπει να επιλέγει όποιο εργαλείο ταιριάζει και να είναι ειλικρινής σχετικά με τους
+      συμβιβασμούς. Κανένα token για κερδοσκοπία.</p>
+  </div>
+</section>
+
+<div class="wrap">
+
+<section id="edges" class="section">
+  <h2 class="riso">Πού μετατοπίζεται η διαφθορά</h2>
+  <p>Εδώ είναι το ειλικρινές μέρος. Όταν κλειδώνετε το καθολικό, η διαφθορά δεν εξαφανίζεται· μετακινείται στις παρυφές,
+    στα σημεία όπου οι άνθρωποι εξακολουθούν να αποφασίζουν:</p>
+  <ul>
+    <li><strong>Ποιος εισέρχεται.</strong> Όποιος εγκρίνει νέα μέλη μπορεί να αφήσει να μπουν ψεύτικοι λογαριασμοί ή να κρατήσει έξω ανταγωνιστές.</li>
+    <li><strong>Ποιος ακούγεται.</strong> Οι συντονιστές μπορούν να φιμώσουν τους επικριτές.</li>
+    <li><strong>Ποιος κατέχει τα κλειδιά και τρέχει τους διακομιστές.</strong> Μπορούν να δουν περισσότερα από άλλους και να απενεργοποιήσουν λειτουργίες.</li>
+    <li><strong>Ποιος ελέγχει τα καταστήματα εφαρμογών και τον νόμο.</strong> Εξωτερικές δυνάμεις μπορούν ακόμα να κλείσουν ένα έργο.</li>
+  </ul>
+  <p>Επομένως, η τεχνολογία είναι η μισή απάντηση. Η άλλη μισή είναι η διακυβέρνηση που είναι εξίσου ανοιχτή:</p>
+  <div class="callout">
+    <p><strong>Τι χρειάζεται επίσης μια αξιόπιστη κοινότητα:</strong> δημοσιευμένους κανόνες εισδοχής και συντονισμού, ένα δημόσιο αρχείο
+      αποφάσεων συντονισμού, εναλλασσόμενους ρόλους ανακλητούς από τα μέλη, τακτικές εκθέσεις διαφάνειας, ανεξάρτητους ελέγχους και
+      περισσότερους από έναν τρόπους εγκατάστασης και εκτέλεσης του λογισμικού, ώστε κανένας φύλακας πύλης να μην μπορεί να το σταματήσει μόνος του.</p>
+  </div>
+  <p>Αυτό δεν είναι αδυναμία της ιδέας· είναι η αναγκαία δουλειά. Η τεχνολογία αφαιρεί τις εύκολες κρυψώνες, και οι άνθρωποι
+    πρέπει να συνεχίσουν να προσέχουν τα υπόλοιπα. Η Elinor Ostrom κέρδισε το Νόμπελ Οικονομικών το 2009 αποδεικνύοντας ότι
+    οι κοινότητες μπορούν να διαχειρίζονται κοινούς πόρους με επιτυχία για αιώνες όταν φτιάχνουν τους δικούς τους κανόνες,
+    ελέγχουν η μία την άλλη δίκαια και επιλύουν τις διαφορές τοπικά. Ο τεχνομουτουαλισμός δίνει σε αυτές τις κοινότητες καλύτερα εργαλεία.</p>
+</section>
+
+<nav class="next" aria-label="Συνεχίστε την ανάγνωση">
+  <p>Επόμενο: <a href="/el/in-practice">Πού λειτουργεί ήδη →</a></p>
+</nav>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap-wide">
+    <p><strong>technomutualism.org</strong> · ξεκίνησε τον Οκτώβριο του 2026 από τους ανθρώπους πίσω από το
+      <a href="https://beanpool.org">The BeanPool Project</a>. Η λέξη είναι ελεύθερη για χρήση από οποιονδήποτε.</p>
+    <p class="small">Άδεια κειμένου <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>: αντιγράψτε το, μεταφράστε το, βελτιώστε το.
+      Πηγαίος κώδικας στο <a href="https://github.com/technomutualism/technomutualism.org">GitHub</a>.
+      Αυτός ο ιστότοπος δεν χρησιμοποιεί cookies και δεν φορτώνει τίποτα από τρίτους.</p>
+  </div>
+</footer>
+</body>
+</html>
