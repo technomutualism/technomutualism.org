@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://technomutualism.org/</loc></url>
-  <url><loc>https://technomutualism.org/history</loc></url>
-  <url><loc>https://technomutualism.org/corruption</loc></url>
-  <url><loc>https://technomutualism.org/in-practice</loc></url>
-  <url><loc>https://technomutualism.org/questions</loc></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://technomutualism.org/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technomutualism.org/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technomutualism.org/"/>
+  </url>
+  <url>
+    <loc>https://technomutualism.org/history</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technomutualism.org/history"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technomutualism.org/history"/>
+  </url>
+  <url>
+    <loc>https://technomutualism.org/corruption</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technomutualism.org/corruption"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technomutualism.org/corruption"/>
+  </url>
+  <url>
+    <loc>https://technomutualism.org/in-practice</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technomutualism.org/in-practice"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technomutualism.org/in-practice"/>
+  </url>
+  <url>
+    <loc>https://technomutualism.org/questions</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://technomutualism.org/questions"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://technomutualism.org/questions"/>
+  </url>
 </urlset>
