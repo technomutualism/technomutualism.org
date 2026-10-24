@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-Hans" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>阳光下的权力 — 技术互助主义</title>
+<meta name="description" content="腐败需要对共有事物拥有隐秘的控制权。签名的记录、公开的规则、共享的密钥以及离开的自由，消除了藏身之所。每一项需要什么，以及区块链在其中的位置。">
+<link rel="canonical" href="https://technomutualism.org/zh-Hans/corruption">
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://technomutualism.org/corruption">
+<link rel="alternate" hreflang="es" href="https://technomutualism.org/es/corruption">
+<link rel="alternate" hreflang="zh-Hans" href="https://technomutualism.org/zh-Hans/corruption">
+<link rel="alternate" hreflang="x-default" href="https://technomutualism.org/corruption">
+<!-- /i18n:alternates -->
+<meta property="og:title" content="从设计上消除腐败">
+<meta property="og:description" content="技术消除腐败与控制之隐秘角落的十二种方式，以及每一项所需的条件。">
+<meta property="og:url" content="https://technomutualism.org/zh-Hans/corruption">
+<meta property="og:image" content="https://technomutualism.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d4ddc6">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳至主要内容</a>
+
+<header class="site-head">
+  <div class="wrap-wide">
+    <a class="brand" href="/zh-Hans/" aria-label="技术互助主义，首页">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="25" cy="32" r="15" fill="#ff7a5c"/><circle cx="39" cy="32" r="15" fill="none" stroke="#14372a" stroke-width="6"/></svg>
+      技术互助主义
+    </a>
+    <nav class="site-nav" aria-label="主要导航">
+      <ul>
+        <li><a href="/zh-Hans/">核心理念</a></li>
+        <li><a href="/zh-Hans/history">历史渊源</a></li>
+        <li><a href="/zh-Hans/corruption" aria-current="page">阳光下的权力</a></li>
+        <li><a href="/zh-Hans/in-practice">付诸实践</a></li>
+        <li><a href="/zh-Hans/questions">常见问题</a></li>
+      </ul>
+    </nav>
+    <!-- i18n:picker -->
+    <details class="lang-picker">
+      <summary><svg class="lang-globe" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> 简体中文</summary>
+      <ul>
+      <li><a href="/corruption?lang=en" hreflang="en" lang="en">English</a></li>
+      <li><a href="/es/corruption?lang=es" hreflang="es" lang="es">Español</a></li>
+      <li><a href="/pt/corruption?lang=pt" hreflang="pt" lang="pt">Português</a></li>
+      <li><a href="/hi/corruption?lang=hi" hreflang="hi" lang="hi">हिन्दी</a></li>
+      <li><a href="/bn/corruption?lang=bn" hreflang="bn" lang="bn">বাংলা</a></li>
+      <li><a href="/fr/corruption?lang=fr" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/ar/corruption?lang=ar" hreflang="ar" lang="ar">العربية</a></li>
+      <li><a href="/id/corruption?lang=id" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+      <li><a href="/ru/corruption?lang=ru" hreflang="ru" lang="ru">Русский</a></li>
+      <li><a href="/zh-Hans/corruption?lang=zh-Hans" hreflang="zh-Hans" lang="zh-Hans" aria-current="true">简体中文</a></li>
+      <li><a href="/zh-Hant/corruption?lang=zh-Hant" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li>
+      <li><a href="/it/corruption?lang=it" hreflang="it" lang="it">Italiano</a></li>
+      <li><a href="/de/corruption?lang=de" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/tr/corruption?lang=tr" hreflang="tr" lang="tr">Türkçe</a></li>
+      <li><a href="/sw/corruption?lang=sw" hreflang="sw" lang="sw">Kiswahili</a></li>
+      <li><a href="/ml/corruption?lang=ml" hreflang="ml" lang="ml">മലയാളം</a></li>
+      <li><a href="/ta/corruption?lang=ta" hreflang="ta" lang="ta">தமிழ்</a></li>
+      <li><a href="/uk/corruption?lang=uk" hreflang="uk" lang="uk">Українська</a></li>
+      <li><a href="/ur/corruption?lang=ur" hreflang="ur" lang="ur">اردو</a></li>
+      <li><a href="/fa/corruption?lang=fa" hreflang="fa" lang="fa">فارسی</a></li>
+      <li><a href="/vi/corruption?lang=vi" hreflang="vi" lang="vi">Tiếng Việt</a></li>
+      <li><a href="/el/corruption?lang=el" hreflang="el" lang="el">Ελληνικά</a></li>
+      <li><a href="/fil/corruption?lang=fil" hreflang="fil" lang="fil">Filipino</a></li>
+      <li><a href="/ja/corruption?lang=ja" hreflang="ja" lang="ja">日本語</a></li>
+      <li><a href="/ko/corruption?lang=ko" hreflang="ko" lang="ko">한국어</a></li>
+      </ul>
+    </details>
+    <!-- /i18n:picker -->
+  </div>
+</header>
+
+<main id="main">
+<!-- i18n:mt-note -->
+<aside class="mt-note" aria-label="Nota de traducción">
+  <div class="wrap">
+    <p>本页面由机器翻译，可能包含错误。英文页面为原始内容。<a href="https://github.com/technomutualism/technomutualism.org">在 GitHub 上帮助改进此翻译</a>。</p>
+  </div>
+</aside>
+<!-- /i18n:mt-note -->
+<div class="wrap">
+
+<section class="hero hero-page">
+  <p class="kicker">阳光下的权力</p>
+  <h1 class="riso">消除藏身之所</h1>
+  <p class="lede">腐败、监视与控制都需要同一样东西：对共有事物的权力，且无人能察觉或阻止。堡垒的未来正是建立在此类权力之上。技术无法让人变好，但它可以让对共有事物的秘密操控极难得逞。</p>
+</section>
+
+<section class="section">
+  <p>想一想腐败究竟是如何发生的。官员篡改土地记录。财务人员在账户之间转移资金。银行向朋友发放贷款。平台暗中修改规则偏袒自己的产品。选票箱不翼而飞。每一种情况都取决于<strong>有人控制着别人无法查验的记录</strong>。</p>
+  <p>技术互助主义直接向这一点发起进攻。这里有十二种方式，以及每一项真正运转起来所需的条件。</p>
+
+  <ol class="fixes">
+    <li>
+      <h3>每笔付款均由付款人签名</h3>
+      <p>每个成员都在自己的手机上持有一个私钥，通常备份为一组助记词。只有用该私钥签名的付款才有效。没有你的密钥，无论是服务器所有者、管理员还是黑客，都无法替你花钱。</p>
+      <p class="needs"><strong>所需条件：</strong>成员保管好自己的密钥，以及一种不将密钥交予他人的简便恢复机制。</p>
+    </li>
+    <li>
+      <h3>内部人士无法增发的货币</h3>
+      <p>在互助信用中，货币仅在一位成员向另一位成员付款时产生：一个余额增加，另一个余额减少相同的数额。所有余额相加始终为零。没有央行、财务主管或“经理的朋友”可以无中生有地造钱。</p>
+      <p class="needs"><strong>所需条件：</strong>由公开规则设定信用额度（例如成员的交易记录），而非由任何人的个人喜好审批。</p>
+    </li>
+    <li>
+      <h3>作为开源代码的规则</h3>
+      <p>手续费、额度和投票的运作方式全部写在任何人都能查阅的开源软件中。“规则”不再是当权者这周随口规定的东西。</p>
+      <p class="needs"><strong>所需条件：</strong>代码公开发布，每次更改公开记录，并配有通俗易懂的说明，以便非程序员也能理解。</p>
+    </li>
+    <li>
+      <h3>显现篡改痕迹的账本</h3>
+      <p>每条记录都可以携带其前序记录的数字指纹（“哈希值”），因此更改一条旧记录会破坏其后的每一个指纹。由不同人持有的独立副本能够立即揭示某一份记录是否被篡改。</p>
+      <p class="needs"><strong>所需条件：</strong>副本由互不隶属的人保管，并且有人实际去核对它们。</p>
+    </li>
+    <li>
+      <h3>自动执行的决策</h3>
+      <p>当成员投票决定从公共基金中支出时，软件会严格按照投票结果执行付款。没有任何人能够“遗忘”、拖延或将其挪用给亲戚。</p>
+      <p class="needs"><strong>所需条件：</strong>预先商定公平的投票规则（谁可以投票，必须达到多大参与度），以及防范虚假账号。</p>
+    </li>
+    <li>
+      <h3>阳光下的公共资金</h3>
+      <p>社区资金（例如每笔销售的微额抽成，或对积攒闲置信用的缓慢折旧）流入一个公共资金池，每笔支出成员都清晰可见。</p>
+      <p class="needs"><strong>所需条件：</strong>在共有资金（社区资产）与私有资金（每个成员的个人交易）之间划定明确界限。</p>
+    </li>
+    <li>
+      <h3>没有任何单一实体掌控密钥</h3>
+      <p>最高权限的密钥（如恢复账户的密钥）经过拆分，必须由位于不同地点的三位持有者中的两位同意才能生效。高风险操作需等待一天并通知成员，以便及时阻止。</p>
+      <p class="needs"><strong>所需条件：</strong>密钥持有者彼此独立，并坦诚向成员说明密钥持有者能做什么与不能做什么。</p>
+    </li>
+    <li>
+      <h3>离开的自由</h3>
+      <p>如果运行社区服务器的人滥用权力，成员可以带走软件副本和自己的记录，在别处另起炉灶。可以被轻易脱离的权力不得不自我约束。</p>
+      <p class="needs"><strong>所需条件：</strong>开源软件，成员可以导出的记录，以及不依赖任何单一公司的域名、云服务或应用商店。</p>
+    </li>
+    <li>
+      <h3>赢得而非买来的信任</h3>
+      <p>声誉源于与许多不同人的真实交易。与自己的朋友绕圈互相交易达到一定程度后就不再计入，因此信任无法被恶意刷取。</p>
+      <p class="needs"><strong>所需条件：</strong>限制任何单一交易对手能为你的记录贡献多少，以及识别虚假账号环形网络的方法。</p>
+    </li>
+    <li>
+      <h3>谁任命了谁，记录在案</h3>
+      <p>谁邀请了每位成员、谁担任什么角色以及谁授予了该角色，全部记录在册。任人唯亲必留痕迹。</p>
+      <p class="needs"><strong>所需条件：</strong>角色变更对成员可见，并具备大家切实关注查看的氛围。</p>
+    </li>
+    <li>
+      <h3>人人拥有隐私，权力保持透明</h3>
+      <p>普通成员的交易应当保密。对共有事物拥有权力的人，其决策与支出应当公开。当这一原则颠倒时，腐败便会滋生。</p>
+      <p class="needs"><strong>所需条件：</strong>严谨的设计，以及未来借助保护隐私的数学机制来证明总账相符，而不暴露任何人的个人财务状况。</p>
+    </li>
+    <li>
+      <h3>小型单元，紧密相连</h3>
+      <p>腐败随着与受影响人群之间距离的增加而滋长。规模小到足以彼此相识的社区，作为平等的个体与其他社区相连，远比一个庞大的单一巨型系统难以被侵蚀。</p>
+      <p class="needs"><strong>所需条件：</strong>任何社区都能自行运行的软件，以及供社区连接和交易的简便途径。</p>
+    </li>
+  </ol>
+</section>
+
+</div>
+
+<section id="blockchain" class="band">
+  <div class="wrap">
+    <h2>那么区块链呢？</h2>
+    <p>区块链是构建无人能暗中重写的账本的一种途径：成千上万份副本，彼此核验。它证明了无需中心化记账人也能让系统运转。这很重要。</p>
+    <p>但区块链并不是唯一的途径，而且伴随着负担：</p>
+    <ul>
+      <li>一些最知名的区块链（尤其是比特币）消耗大量能源，而且大多数都需要代币。代币会招来投机客。</li>
+      <li>“垃圾进，垃圾出”：账本可以防止记录日后被篡改，但无法阻止虚假记录一开始被录入。</li>
+      <li>永久记录无法遗忘，这对于个人数据和错误纠正来说是个难题。</li>
+    </ul>
+    <p>核心在于目标：<strong>一份无法被暗中修改且人们可以自行核验的记录</strong>。签名记录、链式指纹和独立持有的副本可以在没有代币的情况下实现这一目标。你浏览器中的安全挂锁已经依赖公开的“证书透明度”（Certificate Transparency）日志，其工作机制正是如此，完全不涉及区块链。</p>
+    <p>技术互助主义社区应该选择最适合的工具，并坦诚面对权衡。无需用于投机的代币。</p>
+  </div>
+</section>
+
+<div class="wrap">
+
+<section id="edges" class="section">
+  <h2 class="riso">腐败转移到了哪里</h2>
+  <p>这里需要说实话。当你锁定了账本，腐败并不会凭空消失；它转移到了边缘，转移到依然由人决定的环节：</p>
+  <ul>
+    <li><strong>准入资格。</strong>批准新成员的人可以放行虚假账号，或将竞争对手拒之门外。</li>
+    <li><strong>话语权。</strong>版主可以给批评者禁言。</li>
+    <li><strong>持有密钥并运行服务器的人。</strong>他们比其他人看得更多，并且可以关闭服务。</li>
+    <li><strong>控制应用商店和法律的人。</strong>外部权力仍然可以关停一个项目。</li>
+  </ul>
+  <p>因此，技术只是一半的答案。另一半是同样公开的治理：</p>
+  <div class="callout">
+    <p><strong>一个值得信赖的社区还需要：</strong>公开的准入和审核规则、审核决定的公共日志、可轮换且可被成员罢免的角色、定期的透明度报告、独立审计，以及不止一种安装和运行软件的途径，确保没有任何单一守门人可以阻断它。</p>
+  </div>
+  <p>这并非理念的缺陷，这正是日常的工作。技术消除了容易藏身的地方，而人们必须保持警惕，关注其余的环节。埃莉诺·奥斯特罗姆（Elinor Ostrom）因证明社区在制定自己的规则、公平监督并就地解决纠纷时能够良好管理共有资源数百年而荣获2009年诺贝尔经济学奖。技术互助主义为这些社区提供了更好的工具。</p>
+</section>
+
+<nav class="next" aria-label="继续阅读">
+  <p>下一篇：<a href="/zh-Hans/in-practice">它已在何处运转 →</a></p>
+</nav>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap-wide">
+    <p><strong>technomutualism.org</strong> · 始于2026年10月，由 <a href="https://beanpool.org">The BeanPool Project</a> 背后的人们发起。任何人均可自由使用该词。</p>
+    <p class="small">文本采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> 许可：自由复制、翻译、改进。源代码托管于 <a href="https://github.com/technomutualism/technomutualism.org">GitHub</a>。本网站不设置 Cookie，也不从任何第三方加载任何内容。</p>
+  </div>
+</footer>
+</body>
+</html>
