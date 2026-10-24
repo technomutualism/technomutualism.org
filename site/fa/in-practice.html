@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>در عمل — تکنومتقابل‌گرایی</title>
+<meta name="description" content="پروژه BeanPool و نمونه‌های عملی دیگر از اعتبار متقابل، مالکیت اعضا و مشاعات باز، و آنچه تکنومتقابل‌گرایی می‌تواند تغییر دهد: غذا، مسکن، کار، بحران‌ها و موارد دیگر.">
+<link rel="canonical" href="https://technomutualism.org/fa/in-practice">
+<!-- i18n:alternates -->
+<link rel="alternate" hreflang="en" href="https://technomutualism.org/in-practice">
+<link rel="alternate" hreflang="es" href="https://technomutualism.org/es/in-practice">
+<link rel="alternate" hreflang="ar" href="https://technomutualism.org/ar/in-practice">
+<link rel="alternate" hreflang="ur" href="https://technomutualism.org/ur/in-practice">
+<link rel="alternate" hreflang="fa" href="https://technomutualism.org/fa/in-practice">
+<link rel="alternate" hreflang="x-default" href="https://technomutualism.org/in-practice">
+<!-- /i18n:alternates -->
+<meta property="og:title" content="تکنومتقابل‌گرایی در عمل">
+<meta property="og:description" content="پروژه BeanPool و دیگر نمونه‌های عملی، و آنچه می‌توانند دگرگون سازند.">
+<meta property="og:url" content="https://technomutualism.org/fa/in-practice">
+<meta property="og:image" content="https://technomutualism.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fa_IR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_419">
+<meta property="og:locale:alternate" content="ar_AR">
+<meta property="og:locale:alternate" content="ur_PK">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d4ddc6">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">پرش به محتوا</a>
+
+<header class="site-head">
+  <div class="wrap-wide">
+    <a class="brand" href="/fa/" aria-label="تکنومتقابل‌گرایی، صفحه اصلی">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true"><circle cx="25" cy="32" r="15" fill="#ff7a5c"/><circle cx="39" cy="32" r="15" fill="none" stroke="#14372a" stroke-width="6"/></svg>
+      تکنومتقابل‌گرایی
+    </a>
+    <nav class="site-nav" aria-label="اصلی">
+      <ul>
+        <li><a href="/fa/">ایده</a></li>
+        <li><a href="/fa/history">تاریخچه</a></li>
+        <li><a href="/fa/corruption">قدرت در روشنایی</a></li>
+        <li><a href="/fa/in-practice" aria-current="page">در عمل</a></li>
+        <li><a href="/fa/questions">پرسش‌ها</a></li>
+      </ul>
+    </nav>
+    <!-- i18n:picker -->
+    <details class="lang-picker">
+      <summary><svg class="lang-globe" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> فارسی</summary>
+      <ul>
+      <li><a href="/in-practice?lang=en" hreflang="en" lang="en">English</a></li>
+      <li><a href="/es/in-practice?lang=es" hreflang="es" lang="es">Español</a></li>
+      <li><a href="/pt/in-practice?lang=pt" hreflang="pt" lang="pt">Português</a></li>
+      <li><a href="/hi/in-practice?lang=hi" hreflang="hi" lang="hi">हिन्दी</a></li>
+      <li><a href="/bn/in-practice?lang=bn" hreflang="bn" lang="bn">বাংলা</a></li>
+      <li><a href="/fr/in-practice?lang=fr" hreflang="fr" lang="fr">Français</a></li>
+      <li><a href="/ar/in-practice?lang=ar" hreflang="ar" lang="ar">العربية</a></li>
+      <li><a href="/id/in-practice?lang=id" hreflang="id" lang="id">Bahasa Indonesia</a></li>
+      <li><a href="/ru/in-practice?lang=ru" hreflang="ru" lang="ru">Русский</a></li>
+      <li><a href="/zh-Hans/in-practice?lang=zh-Hans" hreflang="zh-Hans" lang="zh-Hans">简体中文</a></li>
+      <li><a href="/zh-Hant/in-practice?lang=zh-Hant" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a></li>
+      <li><a href="/it/in-practice?lang=it" hreflang="it" lang="it">Italiano</a></li>
+      <li><a href="/de/in-practice?lang=de" hreflang="de" lang="de">Deutsch</a></li>
+      <li><a href="/tr/in-practice?lang=tr" hreflang="tr" lang="tr">Türkçe</a></li>
+      <li><a href="/sw/in-practice?lang=sw" hreflang="sw" lang="sw">Kiswahili</a></li>
+      <li><a href="/ml/in-practice?lang=ml" hreflang="ml" lang="ml">മലയാളം</a></li>
+      <li><a href="/ta/in-practice?lang=ta" hreflang="ta" lang="ta">தமிழ்</a></li>
+      <li><a href="/uk/in-practice?lang=uk" hreflang="uk" lang="uk">Українська</a></li>
+      <li><a href="/ur/in-practice?lang=ur" hreflang="ur" lang="ur">اردو</a></li>
+      <li><a href="/fa/in-practice?lang=fa" hreflang="fa" lang="fa" aria-current="true">فارسی</a></li>
+      <li><a href="/vi/in-practice?lang=vi" hreflang="vi" lang="vi">Tiếng Việt</a></li>
+      <li><a href="/el/in-practice?lang=el" hreflang="el" lang="el">Ελληνικά</a></li>
+      <li><a href="/fil/in-practice?lang=fil" hreflang="fil" lang="fil">Filipino</a></li>
+      <li><a href="/ja/in-practice?lang=ja" hreflang="ja" lang="ja">日本語</a></li>
+      <li><a href="/ko/in-practice?lang=ko" hreflang="ko" lang="ko">한국어</a></li>
+      </ul>
+    </details>
+    <!-- /i18n:picker -->
+  </div>
+</header>
+
+<main id="main">
+<!-- i18n:mt-note -->
+<aside class="mt-note" aria-label="Nota de traducción">
+  <div class="wrap">
+    <p>این صفحه به صورت ماشینی ترجمه شده است و ممکن است حاوی اشتباهاتی باشد. صفحه انگلیسی نسخه اصلی است. <a href="https://github.com/technomutualism/technomutualism.org">به بهبود این ترجمه در GitHub کمک کنید</a>.</p>
+  </div>
+</aside>
+<!-- /i18n:mt-note -->
+<div class="wrap">
+
+<section class="hero hero-page">
+  <p class="kicker">در عمل</p>
+  <h1 class="riso">هم‌اکنون در حال رخ دادن است</h1>
+  <p class="lede">در حالی که عده‌ای معدود در حال ساختن قلعه‌ها هستند، جوامع بدون منتظر ماندن برای کسب اجازه، در حال ساختن راه جایگزین هستند. بخش‌هایی از آن امروز در حال کار است؛ از کسب‌وکارهای سوئیسی تا روستاهای کنیا و دو شهر در استرالیا. در اینجا می‌توانید ببینید کجا و چگونه می‌تواند گسترش یابد.</p>
+</section>
+
+<section id="beanpool" class="section">
+  <h2 class="riso">The BeanPool Project</h2>
+  <p><strong>BeanPool</strong> یک نرم‌افزار رایگان و منبع‌باز است که به هر جامعه‌ای امکان می‌دهد بازار محلی و اعتبار متقابل خود را روی سروری که خود کنترل می‌کند، اجرا نماید. این نخستین پروژه‌ای است که از پایه بر اساس اصول تکنومتقابل‌گرایی ساخته شده و هم‌اکنون توسط جوامع واقعی در استرالیا مورد استفاده قرار می‌گیرد.</p>
+
+  <ul class="cards">
+    <li class="card"><h3>یک بازار روی نقشه</h3><p>اعضا آنچه را که عرضه می‌کنند و آنچه را نیاز دارند ارسال می‌کنند: تخم‌مرغ، همسفری با خودرو، تعمیرات، تدریس، ابزار، رویدادها. همه چیز روی نقشه‌ای از منطقه محلی قرار می‌گیرد.</p></li>
+    <li class="card"><h3>Beans، نه پول بانکی</h3><p>اعضا با Beans به یکدیگر پرداخت می‌کنند که یک اعتبار متقابل است. Beans زمانی خلق می‌شوند که یک عضو به عضو دیگر پرداخت کند، و مجموع همه حساب‌ها همیشه صفر است. بدون بانک، بدون بهره، و بدون سکه‌ای برای سفته‌بازی.</p></li>
+    <li class="card"><h3>اعتباری که به دست می‌آورید</h3><p>فضای خرج کردن با دادوستد واقعی باز می‌شود و با سابقه شما رشد می‌کند. معامله در یک حلقه تکراری با همان شریک از شمارش بازمی‌ماند، بنابراین اعتماد را نمی‌توان جعل کرد.</p></li>
+    <li class="card"><h3>یک صندوق عمومی</h3><p>کارمزد اندکی بر فروش در بازار و کاهش تدریجی و آرام مانده‌های راکد و انباشته به یک صندوق جامعه واریز می‌شود، و به شیوه‌ای که اعضا تصمیم می‌گیرند خرج می‌گردد.</p></li>
+    <li class="card"><h3>کلیدهای شما، حساب شما</h3><p>حساب هر عضو یک کلید روی گوشی اختصاصی خود اوست که به عنوان ۱۲ کلمه پشتیبان‌گیری می‌شود. پرداخت‌ها توسط پرداخت‌کننده امضا می‌شوند. گفتگوهای خصوصی سرتاسر رمزگذاری شده‌اند.</p></li>
+    <li class="card"><h3>خودتان آن را اجرا کنید</h3><p>هر جامعه‌ای می‌تواند بدون وابستگی به دامنه ما، سرورهای ما یا اجازه ما، آن را روی سرور خود نصب کند. جوامع می‌توانند با یکدیگر پیوند برقرار کرده و دادوستد کنند.</p></li>
+  </ul>
+
+  <p>این برنامه به عنوان یک اپلیکیشن روی اندروید و آیفون و در هر مرورگر وبی کار می‌کند. یک گاوصندوق کلید مشترک، که توسط امین‌های مستقل در کشورهای مختلف نگهداری می‌شود، در حال ساخت است تا گم شدن تلفن هرگز به معنای از دست رفتن حساب نباشد.</p>
+  <p><a class="button" href="https://beanpool.org">مشاهده The BeanPool Project</a><a class="button secondary" href="https://github.com/beanpool-org/beanpool">خواندن کدها</a></p>
+  <p class="note">BeanPool یک تلاش است، نه تنها تلاش. کدهای آن دقیقاً تحت مجوز MIT رایگان است تا دیگران بتوانند آن را کپی کنند، انشعاب دهند و چیزی بهتر بسازند. این ایده است که اهمیت دارد، نه برنده شدن یک پروژه خاص.</p>
+</section>
+
+<section id="others" class="section">
+  <h2 class="riso">تلاش‌های دیگری که در همین مسیرند</h2>
+  <ul class="cards">
+    <li class="card"><h3>WIR، سوئیس</h3><p>از سال ۱۹۳۴، ده‌ها هزار کسب‌وکار کوچک از طریق یک شبکه تعاونی به یکدیگر اعتبار داده‌اند. مطالعات جیمز استودر، اقتصاددان، نشان داد که این شبکه در دوران رکود فعال‌تر می‌شود و دقیقاً زمانی که بانک‌ها عقب‌نشینی می‌کنند، اقتصاد محلی را تثبیت می‌نماید.</p></li>
+    <li class="card"><h3>Sardex، ساردینیا</h3><p>از سال ۲۰۱۰، هزاران کسب‌وکار در جزیره‌ای که به شدت از بحران مالی آسیب دیده بود، به جای انتظار برای وام‌های بانکی، با اعتبار متقابل به تجارت پرداختند.</p></li>
+    <li class="card"><h3>شبکه سارافو (Sarafu Network)، کنیا</h3><p>ارزهای جامعه‌محور که توسط سازمان غیرانتفاعی Grassroots Economics اداره می‌شوند، به روستاها و سکونتگاه‌های غیررسمی کمک می‌کنند تا هنگام کمبود شیلینگ، دادوستد غذا، آب و هزینه‌های مدرسه را ادامه دهند.</p></li>
+    <li class="card"><h3>موندراگون، اسپانیا</h3><p>از سال ۱۹۵۶، شبکه‌ای از تعاونی‌های عمدتاً کارگری در منطقه باسک به ده‌ها هزار کارگر، با بانک، دانشگاه و سوپرمارکت‌های اختصاصی خود گسترش یافته است.</p></li>
+    <li class="card"><h3>تعاونی‌های اعتباری، در سراسر جهان</h3><p>تعاونی‌های مالی متعلق به اعضای خود، با صدها میلیون عضو در سراسر جهان. سود به جای سهامداران خارجی، به خود اعضا بازمی‌گردد.</p></li>
+    <li class="card"><h3>صندوق‌های زمین جامعه‌محور</h3><p>از زمان تأسیس نخستین صندوق در جورجیای آمریکا در سال ۱۹۶۹، جوامع زمین‌ها را به صورت مشاع نگه داشته و قیمت‌های فروش مجدد را محدود کرده‌اند تا خانه‌ها در بلندمدت مقرون‌به‌صرفه بمانند.</p></li>
+    <li class="card"><h3>بانک‌های زمان</h3><p>یک ساعت کمک، یک ساعت کمک در ازای آن به همراه دارد، فارغ از اینکه چه کسی آن را ارائه دهد. در سراسر جهان برای مراقبت از کودکان، سالمندان و کارهای روزمره استفاده می‌شود.</p></li>
+    <li class="card"><h3>ویکی‌پدیا و لینوکس</h3><p>اثباتی روشن بر این‌که جوامع بزرگی که کار خود را به اشتراک می‌گذارند، می‌توانند در مقیاس جهانی چیزهایی بسازند که با بزرگ‌ترین شرکت‌ها رقابت کند.</p></li>
+  </ul>
+</section>
+
+</div>
+
+<section id="could-change" class="band">
+  <div class="wrap">
+    <h2>چه چیزی می‌تواند تغییر کند</h2>
+    <p>این اجزا را کنار هم بگذارید، با ابزارهایی که هر جامعه‌ای می‌تواند مالک آن‌ها باشد، و ببینید چه چیزهایی ممکن می‌شود.</p>
+
+    <h3>غذا</h3>
+    <p>کشاورزان محصول خود را از پیش به همسایگان می‌فروشند، مازاد را مبادله می‌کنند و نشاء و نیروی کار را دادوستد می‌نمایند، بدون آنکه سوپرمارکتی سهمی بردارد. جوامعی که غذای خود را تولید و مبادله می‌کنند، کمتر در معرض شوک‌های زنجیره تأمین و گران‌فروشی قرار می‌گیرند.</p>
+
+    <h3>خانه‌ها و زمین</h3>
+    <p>زمین‌هایی که از طریق صندوق‌های زمین جامعه‌محور به صورت مشاع نگهداری می‌شوند، و حقوق ثبت‌شده برای استفاده از آن‌ها، می‌توانند خانه‌ها را از بازی سوداگری دور نگه دارند تا زندگی در یک مکان به معنای پرداخت اجاره به کسی نباشد که هرگز به آنجا سر نمی‌زند.</p>
+
+    <h3>کار در زمان کمبود پول</h3>
+    <p>در دوران رکود، کار و نیازها ناپدید نمی‌شوند؛ بلکه پول ناپدید می‌شود. اعتبار متقابل به یک لوله‌کش، یک نانوا و یک معلم اجازه می‌دهد حتی زمانی که هیچ‌کس پول نقد ندارد به دادوستد با یکدیگر ادامه دهند، همان‌گونه که WIR به مدت نود سال آن را به اثبات رسانده است.</p>
+
+    <h3>مناطقی با پول ناپایدار</h3>
+    <p>جایی که پول ملی سقوط می‌کند یا بانک‌ها از دسترس خارج هستند، اعتبار خود جامعه روی تلفن‌هایی که مردم در دست دارند، تجارت محلی را زنده نگه می‌دارد. بر خلاف کوپن‌های کاغذی، اعتبارات دیجیتالی امضا شده را نمی‌توان بدون کلید مالک جعل کرد.</p>
+
+    <h3>پس از بلایای طبیعی</h3>
+    <p>هنگام وقوع سیل یا آتش‌سوزی، همسایگان نخستین امدادگران هستند. یک شبکه محلی آماده برای ارائه سرپناه، ابزار، غذا و نیروی کار، و پیگیری اینکه چه کسی به چه کسی کمک کرده است، نیت‌های خیر را به یک فرایند بازیابی سازمان‌یافته تبدیل می‌کند.</p>
+
+    <h3>مراقبت و نگهداری</h3>
+    <p>مراقبت از کودکان، بیماران و سالمندان بیشترین کار بدون دستمزد در جهان را تشکیل می‌دهد. ثبت آن به عنوان یک مشارکت واقعی، آن‌گونه که بانک‌های زمان انجام می‌دهند، ارزش واقعی آن را به رسمیت می‌شناسد.</p>
+
+    <h3>سازماندهی بدون زیر نظر بودن</h3>
+    <p>چت‌های گروهی که سرتاسر رمزگذاری شده‌اند، روی سروری که جامعه خود آن را اداره می‌کند، به گونه‌ای که سازماندهی یک تعاونی غذایی، یک اتحادیه یا یک اعتراض به پلتفرمی وابسته نباشد که بتواند شما را خاموش کند یا مجبور به تحویل پیام‌هایتان شود.</p>
+
+    <h3>نهادهای درستکار</h3>
+    <p>باشگاه‌ها، تعاونی‌ها، اتحادیه‌ها و شوراهای شهر می‌توانند منابع مالی و آراء خود را روی سوابق باز و امضاشده اداره کنند. نه به این دلیل که انسان‌ها بد هستند، بلکه به این دلیل که هیچ‌کس نباید مجبور باشد صرفاً به حرف شفاهی کسی اعتماد کند.</p>
+  </div>
+</section>
+
+<div class="wrap">
+
+<section id="start" class="section">
+  <h2 class="riso">چگونه شروع کنیم</h2>
+  <ol>
+    <li><strong>همراهان خود را بیابید.</strong> جمعی از همسایگان که هم‌اکنون با یکدیگر دادوستد می‌کنند، کالا مبادله می‌نمایند یا به هم یاری می‌رسانند: یک بازار محلی، یک باغ، یک محله، یا یک باشگاه.</li>
+    <li><strong>ابزارهای خود را انتخاب کنید.</strong> <a href="https://beanpool.org">BeanPool</a> یا هر ابزار باز دیگری را که جامعه شما بتواند مالک آن باشد و اداره‌اش کند، امتحان کنید.</li>
+    <li><strong>قوانین خود را بنویسید.</strong> چه کسی می‌تواند بپیوندد، اختلافات چگونه حل می‌شوند، و صندوق مشترک چگونه خرج می‌شود. آن‌ها را منتشر کنید.</li>
+    <li><strong>کوچک و واقعی شروع کنید.</strong> چیزهای واقعی را که مردم واقعاً به آن‌ها نیاز دارند مبادله کنید. اجازه دهید از همان نقطه رشد کند.</li>
+    <li><strong>پیوند برقرار کنید.</strong> با جوامع دیگر به عنوان برابرها پیوند برقرار کنید، و آنچه می‌آموزید را به اشتراک بگذارید.</li>
+  </ol>
+</section>
+
+<nav class="next" aria-label="ادامه مطالعه">
+  <p>بعدی: <a href="/fa/questions">پرسش‌های متداول ←</a></p>
+</nav>
+
+</div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap-wide">
+    <p><strong>technomutualism.org</strong> · در اکتبر ۲۰۲۶ توسط افراد پشت <a href="https://beanpool.org">The BeanPool Project</a> آغاز شد. استفاده از این کلمه برای همه آزاد است.</p>
+    <p class="small">متن تحت مجوز <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>: آن را کپی کنید، ترجمه کنید، بهبود دهید.
+      کد منبع در <a href="https://github.com/technomutualism/technomutualism.org">GitHub</a>.
+      این سایت هیچ کوکی‌ای تنظیم نمی‌کند و هیچ چیزی از دیگران بارگیری نمی‌کند.</p>
+  </div>
+</footer>
+</body>
+</html>
