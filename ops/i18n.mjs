@@ -185,6 +185,76 @@ function setOgLocales(content, currentCode, availableLanguages) {
   return content;
 }
 
+const JSONLD_RE = /<!--\s*i18n:jsonld\s*-->[\s\S]*?<!--\s*\/i18n:jsonld\s*-->\n?/;
+const LICENSE_URL = 'https://creativecommons.org/licenses/by-sa/4.0/';
+
+// Markup to plain text, for the structured data. Block tags become a space; inline tags (strong, em, a) vanish, so
+// Chinese and Japanese get no stray spaces. &shy; is the only entity the pages use; the others are for safety.
+function plainText(html) {
+  return html
+    .replace(/<\/?(?:p|br|li|ul|ol|div|h[1-6]|footer|section)\b[^>]*>/gi, ' ')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&shy;/g, '')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+    .replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+// The structured data (JSON-LD) for one page, built only from that page's own words, so every language says what its
+// page says. Every page: a WebPage. Home: also the WebSite and the definition as a DefinedTerm. Questions: an FAQPage.
+// No 404. Returns '' when the page has no canonical address.
+export function generateJsonLd(content, filename, langCode) {
+  if (filename === '404.html') return '';
+  const html = content.replace(JSONLD_RE, '');
+  const url = html.match(/<link rel="canonical" href="([^"]+)">/)?.[1];
+  if (!url) return '';
+  const name = plainText(html.match(/<title>([\s\S]*?)<\/title>/)?.[1] ?? '');
+  const description = html.match(/<meta name="description" content="([^"]*)">/)?.[1];
+  const homeUrl = langCode === 'en' ? 'https://technomutualism.org/' : `https://technomutualism.org/${langCode}/`;
+  const siteName = plainText(html.match(/<a class="brand"[^>]*>([\s\S]*?)<\/a>/)?.[1] ?? 'Technomutualism');
+
+  const page = {
+    '@type': filename === 'questions.html' ? 'FAQPage' : 'WebPage',
+    '@id': url,
+    url,
+    name,
+    ...(description ? { description: plainText(description) } : {}),
+    inLanguage: langCode,
+    isPartOf: { '@id': `${homeUrl}#website` },
+    license: LICENSE_URL
+  };
+  const graph = [page];
+
+  if (filename === 'index.html') {
+    graph.unshift({ '@type': 'WebSite', '@id': `${homeUrl}#website`, url: homeUrl, name: siteName, inLanguage: langCode, license: LICENSE_URL });
+    const definition = html.match(/<div class="definition">([\s\S]*?)<\/div>/)?.[1] ?? '';
+    const term = definition.match(/<dfn>([\s\S]*?)<\/dfn>/)?.[1];
+    const meaning = [...definition.matchAll(/<p>([\s\S]*?)<\/p>/g)].map((m) => m[1]).find((p) => !p.includes('<dfn>'));
+    if (term && meaning) {
+      const termId = `${url}#what`;
+      graph.push({ '@type': 'DefinedTerm', '@id': termId, name: plainText(term), description: plainText(meaning), inLanguage: langCode, url: termId });
+      page.about = { '@id': termId };
+    }
+  }
+
+  if (filename === 'questions.html') {
+    const main = html.slice(html.indexOf('<main'));
+    page.mainEntity = [...main.matchAll(/<details(?![^>]*lang-picker)[^>]*>\s*<summary>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/g)]
+      .map(([, q, a]) => ({ '@type': 'Question', name: plainText(q), acceptedAnswer: { '@type': 'Answer', text: plainText(a) } }));
+  }
+
+  const json = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\\u003c');
+  return `<!-- i18n:jsonld -->\n<script type="application/ld+json">${json}</script>\n<!-- /i18n:jsonld -->\n`;
+}
+
+function setJsonLd(content, filename, langCode) {
+  const block = generateJsonLd(content, filename, langCode);
+  if (JSONLD_RE.test(content)) return content.replace(JSONLD_RE, block);
+  return block ? content.replace('</head>', `${block}</head>`) : content;
+}
+
 function processPageContent(content, filename, langCode, availableLanguages) {
   let updated = content;
 
@@ -205,6 +275,9 @@ function processPageContent(content, filename, langCode, availableLanguages) {
 
   // 5. og:locale and og:locale:alternate
   updated = setOgLocales(updated, langCode, availableLanguages);
+
+  // 6. Structured data (JSON-LD), from the page's own words
+  updated = setJsonLd(updated, filename, langCode);
 
   return updated;
 }
@@ -464,17 +537,19 @@ function runCheck() {
   console.log('i18n check passed: all blocks fresh, all pages present, links verified, hashes match.');
 }
 
-// CLI entry point
-const args = process.argv.slice(2);
-if (args.includes('--check')) {
-  runCheck();
-} else if (args[0] === '--stamp') {
-  const code = args[1];
-  if (!code) {
-    console.error('Usage: node ops/i18n.mjs --stamp <code>');
-    process.exit(1);
+// CLI entry point (not when a test imports this file)
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
+  const args = process.argv.slice(2);
+  if (args.includes('--check')) {
+    runCheck();
+  } else if (args[0] === '--stamp') {
+    const code = args[1];
+    if (!code) {
+      console.error('Usage: node ops/i18n.mjs --stamp <code>');
+      process.exit(1);
+    }
+    runStamp(code);
+  } else {
+    runDefault();
   }
-  runStamp(code);
-} else {
-  runDefault();
 }

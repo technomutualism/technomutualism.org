@@ -1,6 +1,8 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
+import fs from 'node:fs';
 import { pickLanguage, pageFor, SUPPORTED_CODES } from '../functions/_middleware.js';
+import { generateJsonLd, getVisibleText } from './i18n.mjs';
 
 // Matching rules are tested against a site that has every language; the fallthrough tests below use a partial site.
 const ALL = new Set(SUPPORTED_CODES);
@@ -120,5 +122,54 @@ describe('i18n middleware unit tests', () => {
       assert.strictEqual(pickLanguage('es', 'tm_lang=de', PARTIAL), 'es');
       assert.strictEqual(pickLanguage('es', 'tm_lang=en', PARTIAL), 'en');
     });
+  });
+});
+
+describe('structured data (JSON-LD)', () => {
+  const read = (f) => fs.readFileSync(new URL(`../site/${f}`, import.meta.url), 'utf8');
+  const graphOf = (html, page, lang) => {
+    const block = generateJsonLd(html, page, lang);
+    return JSON.parse(block.match(/<script type="application\/ld\+json">(.*)<\/script>/s)[1])['@graph'];
+  };
+
+  test('home: WebSite, WebPage and the definition, in English and a translation', () => {
+    for (const [file, lang, home] of [['index.html', 'en', 'https://technomutualism.org/'], ['ja/index.html', 'ja', 'https://technomutualism.org/ja/']]) {
+      const g = graphOf(read(file), 'index.html', lang);
+      assert.deepStrictEqual(g.map((x) => x['@type']), ['WebSite', 'WebPage', 'DefinedTerm']);
+      assert.strictEqual(g[0].url, home);
+      assert.strictEqual(g[1].url, home);
+      assert.strictEqual(g[1].inLanguage, lang);
+      assert.ok(g[2].description.length > 100);
+    }
+    const ja = graphOf(read('ja/index.html'), 'index.html', 'ja');
+    assert.ok(!/ \p{Script=Han}|\p{Script=Katakana} \p{Script=Hiragana}/u.test(ja[2].description), 'no stray space where an inline tag was');
+  });
+
+  test('questions: an FAQPage with every question and its answer, in the page language', () => {
+    for (const [file, lang] of [['questions.html', 'en'], ['fr/questions.html', 'fr']]) {
+      const html = read(file);
+      const g = graphOf(html, 'questions.html', lang);
+      const asked = (html.match(/<details(?![^>]*lang-picker)/g) || []).length;
+      assert.strictEqual(g[0]['@type'], 'FAQPage');
+      assert.strictEqual(g[0].mainEntity.length, asked);
+      for (const q of g[0].mainEntity) assert.ok(q.name && q.acceptedAnswer.text.length > 20);
+    }
+  });
+
+  test('no structured data on 404, and none on a page without a canonical address', () => {
+    assert.strictEqual(generateJsonLd(read('404.html'), '404.html', 'en'), '');
+    assert.strictEqual(generateJsonLd('<html><head><title>x</title></head></html>', 'history.html', 'en'), '');
+  });
+
+  test('a "<" in the page text cannot close the script early', () => {
+    const html = '<head><title>a </script> b</title><link rel="canonical" href="https://technomutualism.org/history"></head>';
+    assert.ok(!generateJsonLd(html, 'history.html', 'en').slice(0, -30).includes('</script>'));
+  });
+
+  test('the block does not change the text the translation hashes cover', () => {
+    const html = read('index.html');
+    const without = html.replace(/<!--\s*i18n:jsonld\s*-->[\s\S]*?<!--\s*\/i18n:jsonld\s*-->\n?/, '');
+    assert.notStrictEqual(without, html);
+    assert.strictEqual(getVisibleText(html), getVisibleText(without));
   });
 });
