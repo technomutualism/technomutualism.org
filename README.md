@@ -39,7 +39,7 @@ An idempotent, zero-dependency Node tool (`Node >= 20`) manages metadata and int
   ```sh
   node ops/i18n.mjs
   ```
-  Fills the three marked blocks in every page (`<!-- i18n:alternates -->`, `<!-- i18n:picker -->`, `<!-- i18n:mt-note -->`), sets `<html lang="..." dir="...">`, updates OpenGraph locales (`og:locale` and `og:locale:alternate`), and updates `site/sitemap.xml` with `xhtml:link` alternates for all available translations.
+  Fills the three marked blocks in every page (`<!-- i18n:alternates -->`, `<!-- i18n:picker -->`, `<!-- i18n:mt-note -->`), sets `<html lang="..." dir="...">`, updates OpenGraph locales (`og:locale` and `og:locale:alternate`), writes each page's structured data (`<!-- i18n:jsonld -->`: JSON-LD built from the page's own title, description, definition and questions, so every language says what its page says; none on 404), and updates `site/sitemap.xml` with `xhtml:link` alternates for all available translations.
 
 - **Check translation freshness and links**:
   ```sh
